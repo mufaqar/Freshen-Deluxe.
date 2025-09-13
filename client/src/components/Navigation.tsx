@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
+import logo from "@assets/Header Logo_1757788154322.png";
 
 interface NavigationProps {
   className?: string;
@@ -32,9 +33,11 @@ export default function Navigation({ className = "" }: NavigationProps) {
           {/* Logo */}
           <Link href="/">
             <div className="flex items-center cursor-pointer" data-testid="link-logo">
-              <span className="text-2xl font-serif font-bold text-primary">
-                Freshen Deluxe
-              </span>
+              <img 
+                src={logo} 
+                alt="Freshen Deluxe - Boutique Cleaning Services" 
+                className="h-8 w-auto"
+              />
             </div>
           </Link>
 

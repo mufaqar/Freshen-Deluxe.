@@ -1,6 +1,6 @@
 import ServiceCard from '../ServiceCard'
 import { Building2 } from 'lucide-react'
-import officeImage from "@assets/generated_images/Luxury_office_cleaning_service_da282c2d.png"
+import officeImage from "@assets/pexels-cottonbro-6466226_1757788137471.jpg"
 
 export default function ServiceCardExample() {
   return (
@@ -13,7 +13,6 @@ export default function ServiceCardExample() {
         "Eco-friendly products",
         "Quality assurance guarantee"
       ]}
-      pricing="From AED 150/hr"
       image={officeImage}
       icon={Building2}
       popular={true}

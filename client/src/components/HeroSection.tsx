@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageSquare } from "lucide-react";
-import heroImage from "@assets/generated_images/Luxury_Dubai_interior_cleaning_fbcfd60b.png";
+import heroImage from "@assets/pexels-cottonbro-6466492_1757788137475.jpg";
 
 interface HeroSectionProps {
   onBookNow?: () => void;
@@ -23,14 +23,13 @@ export default function HeroSection({ onBookNow, onWhatsApp }: HeroSectionProps)
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight">
-            Dubai's Most{" "}
-            <span className="text-ring">Luxurious</span>{" "}
-            Cleaning Services
+            For Those Who Value{" "}
+            <span className="text-ring">Quality</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-            Boutique cleaning company delivering hospitality-level service with 
-            unmatched attention to detail for commercial, residential, and Airbnb properties.
+            We don't just clean homes... we curate spaces that embody elegance. 
+            Bringing hotel-level precision to Dubai's most prestigious properties.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

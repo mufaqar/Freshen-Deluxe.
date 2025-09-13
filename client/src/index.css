@@ -14,62 +14,62 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .08);
 
-  --background: 45 25% 96%;
+  --background: 45 33% 96%;
 
-  --foreground: 220 15% 25%;
+  --foreground: 212 45% 32%;
 
-  --border: 220 10% 88%;
+  --border: 212 20% 88%;
 
-  --card: 45 15% 94%;
+  --card: 45 25% 94%;
 
-  --card-foreground: 220 15% 25%;
+  --card-foreground: 212 45% 32%;
 
-  --card-border: 220 10% 90%;
+  --card-border: 212 20% 90%;
 
-  --sidebar: 45 10% 92%;
+  --sidebar: 45 20% 92%;
 
-  --sidebar-foreground: 220 15% 25%;
+  --sidebar-foreground: 212 45% 32%;
 
-  --sidebar-border: 220 8% 86%;
+  --sidebar-border: 212 18% 86%;
 
-  --sidebar-primary: 220 85% 15%;
+  --sidebar-primary: 212 45% 32%;
 
-  --sidebar-primary-foreground: 45 25% 96%;
+  --sidebar-primary-foreground: 45 33% 96%;
 
-  --sidebar-accent: 45 20% 88%;
+  --sidebar-accent: 45 30% 88%;
 
-  --sidebar-accent-foreground: 220 15% 25%;
+  --sidebar-accent-foreground: 212 45% 32%;
 
-  --sidebar-ring: 45 95% 65%;
+  --sidebar-ring: 42 55% 64%;
 
-  --popover: 45 20% 90%;
+  --popover: 45 25% 90%;
 
-  --popover-foreground: 220 15% 25%;
+  --popover-foreground: 212 45% 32%;
 
-  --popover-border: 220 8% 84%;
+  --popover-border: 212 18% 84%;
 
-  --primary: 220 85% 15%;
+  --primary: 212 45% 32%;
 
-  --primary-foreground: 45 25% 96%;
+  --primary-foreground: 45 33% 96%;
 
-  --secondary: 220 8% 86%;
+  --secondary: 212 15% 86%;
 
-  --secondary-foreground: 220 15% 25%;
+  --secondary-foreground: 212 45% 32%;
 
-  --muted: 220 6% 88%;
+  --muted: 212 10% 88%;
 
-  --muted-foreground: 220 12% 45%;
+  --muted-foreground: 212 25% 55%;
 
-  --accent: 45 15% 86%;
+  --accent: 45 25% 86%;
 
-  --accent-foreground: 220 15% 25%;
+  --accent-foreground: 212 45% 32%;
 
   --destructive: 0 84% 35%;
 
   --destructive-foreground: 0 0% 98%;
 
-  --input: 220 15% 75%;
-  --ring: 45 95% 65%;
+  --input: 212 20% 75%;
+  --ring: 42 55% 64%;
   --chart-1: 220 85% 15%;
   --chart-2: 45 95% 65%;
   --chart-3: 220 15% 25%;
@@ -132,63 +132,63 @@
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
 
-  --background: 220 10% 8%;
+  --background: 212 20% 8%;
 
-  --foreground: 45 15% 88%;
+  --foreground: 45 25% 88%;
 
-  --border: 220 8% 14%;
+  --border: 212 15% 14%;
 
-  --card: 220 8% 10%;
+  --card: 212 15% 10%;
 
-  --card-foreground: 45 15% 88%;
+  --card-foreground: 45 25% 88%;
 
-  --card-border: 220 8% 16%;
+  --card-border: 212 15% 16%;
 
-  --sidebar: 220 6% 12%;
+  --sidebar: 212 12% 12%;
 
-  --sidebar-foreground: 45 15% 88%;
+  --sidebar-foreground: 45 25% 88%;
 
-  --sidebar-border: 220 8% 18%;
+  --sidebar-border: 212 15% 18%;
 
-  --sidebar-primary: 220 85% 15%;
+  --sidebar-primary: 212 45% 32%;
 
-  --sidebar-primary-foreground: 45 25% 96%;
+  --sidebar-primary-foreground: 45 33% 96%;
 
-  --sidebar-accent: 220 12% 18%;
+  --sidebar-accent: 212 20% 18%;
 
-  --sidebar-accent-foreground: 45 15% 88%;
+  --sidebar-accent-foreground: 45 25% 88%;
 
-  --sidebar-ring: 45 95% 65%;
+  --sidebar-ring: 42 55% 64%;
 
-  --popover: 220 10% 14%;
+  --popover: 212 18% 14%;
 
-  --popover-foreground: 45 15% 88%;
+  --popover-foreground: 45 25% 88%;
 
-  --popover-border: 220 8% 20%;
+  --popover-border: 212 15% 20%;
 
-  --primary: 220 85% 15%;
+  --primary: 212 45% 32%;
 
-  --primary-foreground: 45 25% 96%;
+  --primary-foreground: 45 33% 96%;
 
-  --secondary: 220 8% 18%;
+  --secondary: 212 15% 18%;
 
-  --secondary-foreground: 45 15% 88%;
+  --secondary-foreground: 45 25% 88%;
 
-  --muted: 220 6% 16%;
+  --muted: 212 12% 16%;
 
-  --muted-foreground: 220 8% 65%;
+  --muted-foreground: 212 15% 65%;
 
-  --accent: 220 8% 14%;
+  --accent: 212 15% 14%;
 
-  --accent-foreground: 45 15% 88%;
+  --accent-foreground: 45 25% 88%;
 
   --destructive: 0 84% 35%;
 
   --destructive-foreground: 0 0% 98%;
 
   /* Used as the border around inputs. Dark mode: Should be a border that is light enough to have high contrast when rendered on a --card background. More contrast than standard --border */
-  --input: 220 12% 28%;
-  --ring: 45 95% 65%;
+  --input: 212 20% 28%;
+  --ring: 42 55% 64%;
   --chart-1: 45 85% 75%;
   --chart-2: 45 95% 65%;
   --chart-3: 220 40% 75%;

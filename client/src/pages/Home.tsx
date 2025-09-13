@@ -4,46 +4,46 @@ import { Building2, Home as HomeIcon, Bed } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@assets/generated_images/Luxury_Dubai_interior_cleaning_fbcfd60b.png";
-import officeImage from "@assets/generated_images/Luxury_office_cleaning_service_da282c2d.png";
-import airbnbImage from "@assets/generated_images/Luxury_Airbnb_cleaning_service_61020c32.png";
-import teamImage from "@assets/generated_images/Professional_cleaning_team_7784a808.png";
+import heroImage from "@assets/pexels-cottonbro-6466492_1757788137475.jpg";
+import officeImage from "@assets/pexels-cottonbro-6466226_1757788137471.jpg";
+import airbnbImage from "@assets/pexels-cottonbro-6466302_1757788137478.jpg";
+import teamImage from "@assets/pexels-cottonbro-6466216_1757788137470.jpg";
 
 export default function Home() {
   const services = [
     {
-      title: "Commercial Cleaning",
-      description: "Premium office and retail space cleaning with hospitality standards",
+      title: "The Regular Refresh",
+      description: "Perfect for weekly care with five-star hospitality standards",
       features: [
-        "Deep sanitization protocols",
-        "Flexible scheduling options",
-        "Eco-friendly products", 
-        "Quality assurance guarantee"
+        "Meticulous floor care and vacuuming",
+        "Kitchen sanitization and shine restoration",
+        "Bathroom deep disinfection",
+        "Hotel-style linen presentation"
       ],
-      image: officeImage,
-      icon: Building2,
+      image: heroImage,
+      icon: HomeIcon,
       popular: true
     },
     {
-      title: "Residential Cleaning",
-      description: "Luxury home cleaning that treats your space with five-star care",
+      title: "The Complete Clean",
+      description: "Indulgent deep clean, restoring brilliance to every detail",
       features: [
-        "Regular refresh services",
-        "Deep cleaning options",
-        "Premium fragrances",
-        "Trusted professional staff"
+        "Enhanced kitchen and bathroom disinfection",
+        "Detailed glass, mirrors & blinds cleaning",
+        "Careful attention to carpets and upholstery",
+        "Light ambient signature fragrance"
       ],
-      image: heroImage,
-      icon: HomeIcon
+      image: officeImage,
+      icon: Building2
     },
     {
-      title: "Airbnb Cleaning",
-      description: "Hospitality-grade cleaning to ensure perfect guest experiences",
+      title: "Holiday Home & Airbnb Services",
+      description: "Tailored for discerning hosts who want to impress their guests",
       features: [
-        "Fast turnaround times",
-        "Guest-ready standards",
-        "Luxury amenity placement",
-        "Check-in ready guarantee"
+        "Pre-arrival property inspection",
+        "Professional cleaning with Freshen Deluxe touch",
+        "Before & after photo documentation",
+        "Lost & found management"
       ],
       image: airbnbImage,
       icon: Bed
@@ -81,11 +81,11 @@ export default function Home() {
               Our Services
             </Badge>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
-              Boutique Cleaning Excellence
+              We Curate Spaces That Embody Elegance
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From commercial spaces to luxury residences and Airbnb properties, 
-              we deliver hospitality-level service with unmatched attention to detail.
+              Crafted from a background in five-star hospitality, we bring hotel-level 
+              precision to private residences, holiday homes, and premium commercial spaces.
             </p>
           </div>
 
@@ -121,12 +121,12 @@ export default function Home() {
                 Why Choose Us
               </Badge>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
-                Born from Luxury Hospitality
+                The Most Trusted Name in Luxury Property Care
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Freshen Deluxe delivers a level of service that goes far beyond 'cleaning'. 
-                Born from a deep understanding of the luxury hospitality world, we focus on 
-                creating spaces where every detail is noticed and cared for.
+                We don't aim to be the biggest cleaning company in Dubai. We aim to be the most trusted. 
+                Our team is trained to H10 cleaning standards, the rigorous protocols used in the world's 
+                leading five-star hotels.
               </p>
               
               <div className="space-y-6">

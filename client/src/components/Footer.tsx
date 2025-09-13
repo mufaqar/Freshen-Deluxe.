@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Mail, Phone, MessageSquare, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@assets/Transparent Logo1_1757788154323.png";
 
 interface FooterProps {
   className?: string;
@@ -14,9 +15,13 @@ export default function Footer({ className = "" }: FooterProps) {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/">
-              <h3 className="text-2xl font-serif font-bold cursor-pointer" data-testid="link-footer-logo">
-                Freshen Deluxe
-              </h3>
+              <div className="cursor-pointer" data-testid="link-footer-logo">
+                <img 
+                  src={logo} 
+                  alt="Freshen Deluxe - Boutique Cleaning Services" 
+                  className="h-10 w-auto"
+                />
+              </div>
             </Link>
             <p className="text-primary-foreground/80 text-sm">
               Dubai's most luxurious cleaning services. Boutique cleaning company 

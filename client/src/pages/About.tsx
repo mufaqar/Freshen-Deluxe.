@@ -2,8 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Heart, Award, Users, Sparkles } from "lucide-react";
-import teamImage from "@assets/generated_images/Professional_cleaning_team_7784a808.png";
-import heroImage from "@assets/generated_images/Luxury_Dubai_interior_cleaning_fbcfd60b.png";
+import teamImage from "@assets/pexels-cottonbro-6466216_1757788137470.jpg";
+import heroImage from "@assets/pexels-cottonbro-6466492_1757788137475.jpg";
 
 export default function About() {
   //todo: remove mock functionality

@@ -3,9 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Building2, Home as HomeIcon, Bed, Clock, Shield, Sparkles } from "lucide-react";
-import heroImage from "@assets/generated_images/Luxury_Dubai_interior_cleaning_fbcfd60b.png";
-import officeImage from "@assets/generated_images/Luxury_office_cleaning_service_da282c2d.png";
-import airbnbImage from "@assets/generated_images/Luxury_Airbnb_cleaning_service_61020c32.png";
+import heroImage from "@assets/pexels-cottonbro-6466492_1757788137475.jpg";
+import officeImage from "@assets/pexels-cottonbro-6466226_1757788137471.jpg";
+import airbnbImage from "@assets/pexels-cottonbro-6466302_1757788137478.jpg";
 
 export default function Services() {
   const services = [
