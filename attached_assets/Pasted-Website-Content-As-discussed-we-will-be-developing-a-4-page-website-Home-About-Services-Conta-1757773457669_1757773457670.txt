@@ -1,0 +1,46 @@
+Website Content 
+As discussed, we will be developing a 4-page website (Home, About, Services, Contact) for your cleaning services company. To proceed with content and design, we need the following information from you: 
+General 
+1. What is your company name, tagline, and logo? Freshen deluxe, boutique cleaning services. Logo i will send on whatsapp.
+2. Do you have specific brand colors/fonts or should we suggest? Yes navy blue and gold. However feel free, if it looks good, maybe other tones of blue can work. We want it to clean clean and luxurious. The fonts we are using are Kingred modern and Helvetica World, same as with the colours 
+
+3. Who is your main target audience (homes, offices, both)? We are going to have 3 target groups: (i) Commercial (shops, offices, buildings…), (ii) Residential (private houses), (iii) Airbnb (holiday homes, airbnbs, short rental apartments) - we want to focus on all of it but our main priority long term is airbnb
+
+Home Page 
+1. What headline or main message should appear at the top (hero section)? Dubai’s most luxurious cleaning services
+2. What is the primary Call-to-Action (WhatsApp, phone, booking form)? Booking form by email admin@freshendeluxe.com or whatsapp +971 55 436 0800
+3. Do you want to highlight offers/packages on the home page? Mmmm i never though about this… i dont want it to look like a souk like sales!! Sales!! …. But maybe we can think about something that goes with this “luxury vibe”
+4. Do you have professional photos/videos of your services? We are taking them next week when we receive the uniforms, we would like to have ideas of what kind of pics and how many we should take and maybe some inspo.
+
+About Page
+1. What’s your company story (how you started, your mission)? 
+You can see in the about us https://freshendeluxe.com/home/about-us/ the mission and how i started
+2. What makes your cleaning service unique (eco-friendly, trained staff, affordable)? That is already written in the webpage, i will copy paste: Freshen Deluxe is a boutique cleaning company in Dubai with a clear purpose, to deliver a level of service that goes far beyond ‘cleaning’.Born from a deep understanding of the luxury hospitality world, we focus on creating spaces where every detail is noticed and cared for.Our difference lies not only in the consistency of our work, but also in how we look after our team.For us, luxury means effortless quality and a personalised approach that makes every client feel truly valued. At Freshen Deluxe, we don’t just clean, we take care of homes and properties in a way that reflects elegance, comfort, and lasting excellence
+Basically we want to make a difference, we will treat our staff great so they are happy and do the job amazing, and we want to take mental load and give peace of mind with our organisation and customer service skills.
+We also will offer luxury touches in some of the services (chocolates, premium fragrances…)
+3. Do you want to show team photos or just text? Photos will be great, but maybe not just one of each, but all together. I dont know, you have any ideas?
+Services Page 
+1. Which services should be listed (home cleaning, office cleaning, deep cleaning, sofa/carpet, etc.)? 
+(i) Commercial, offices and shops are done by hours needed or square meters, by request and it will be a tailored quote
+(ii) Residential -2 types in here, the regular refresh and the deep cleaning or end of lease, prices vary depending on the number of rooms
+(iii) Airbnb - 2 types in here, the regular refresh and the deep cleaning, prices vary depending on the number of rooms
+
+
+
+2. Do you have standard rates/packages or should pricing be “on request”? 
+Commercial on request, the other two i do have pricing, however depending on the volume we are willing to give discounts, so maybe just put starting from, as i dont know if i want to disclose the price in the website.
+
+3. Should we include before/after photos of past work? The ones i have are not professional, maybe in the future, maybe is good to add a happy customer section
+Contact Page 
+1. What contact details should appear (phone, email, WhatsApp, office address)? All of those but not the address, phone and whatsapp are the same
+2. Do you want a contact form or just direct WhatsApp booking? Both i think, maybe a whatsapp button but also a contact form for email
+3. Should we embed a Google Map with your location? Mmm as the services are provided in whole dubai, i dont think is useful to disclose where we are based
+Price Calculator (on Home Page) 
+1. What services should be included in the calculator (hourly, per room, per service)? 
+2. What is your base hourly rate or per-service rate? 
+3. Do you charge extra for cleaning supplies or include them in price? 
+4. What is the maximum radius you want to cover (15 km, 20 km, etc.) from Business Bay? 
+5. What message should show if the customer is outside the service area? 
+6. Should the calculator directly connect to WhatsApp with pre-filled details (service, hours, cost)? 
+
+Once we receive your responses, we will proceed with the website content and layout.
