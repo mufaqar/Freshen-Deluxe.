@@ -102,17 +102,21 @@ export default function Footer({ className = "" }: FooterProps) {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2 text-primary-foreground/80">
                 <Phone className="h-4 w-4" />
-                <span>+971 55 436 0800</span>
+                <a href="tel:+971554360800" className="hover:text-ring transition-colors">
+                  +971 55 436 0800
+                </a>
               </div>
               <div className="flex items-center space-x-2 text-primary-foreground/80">
                 <Mail className="h-4 w-4" />
-                <span>admin@freshendeluxe.com</span>
+                <a href="mailto:admin@freshendeluxe.com" className="hover:text-ring transition-colors">
+                  admin@freshendeluxe.com
+                </a>
               </div>
               <Button 
                 size="sm"
                 variant="outline"
                 className="mt-4 text-primary-foreground border-primary-foreground/20 hover:bg-primary-foreground/10"
-                onClick={() => console.log('Footer WhatsApp clicked')}
+                onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for Freshen Deluxe cleaning services.')}`, '_blank', 'noopener,noreferrer')}
                 data-testid="button-footer-whatsapp"
               >
                 <MessageSquare className="mr-2 h-4 w-4" />

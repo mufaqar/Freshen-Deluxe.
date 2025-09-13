@@ -69,8 +69,8 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <HeroSection 
-        onBookNow={() => console.log('Hero book now clicked')}
-        onWhatsApp={() => console.log('Hero WhatsApp clicked')}
+        onBookNow={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for Freshen Deluxe cleaning services.')}`, '_blank', 'noopener,noreferrer')}
+        onWhatsApp={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for Freshen Deluxe cleaning services.')}`, '_blank', 'noopener,noreferrer')}
       />
 
       {/* Services Section */}
@@ -94,7 +94,7 @@ export default function Home() {
               <ServiceCard
                 key={index}
                 {...service}
-                onGetQuote={() => console.log(`Get quote clicked for ${service.title}`)}
+                onGetQuote={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for ' + service.title + ' cleaning service.')}`, '_blank', 'noopener,noreferrer')}
               />
             ))}
           </div>
@@ -104,7 +104,7 @@ export default function Home() {
               size="lg"
               className="bg-primary hover:bg-primary/90"
               data-testid="button-view-all-services"
-              onClick={() => console.log('View all services clicked')}
+              onClick={() => window.location.href = '/services'}
             >
               View All Services
             </Button>
@@ -220,7 +220,7 @@ export default function Home() {
               variant="outline"
               className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 backdrop-blur-sm"
               data-testid="button-cta-contact"
-              onClick={() => console.log('CTA contact clicked')}
+              onClick={() => window.open('tel:+971554360800')}
             >
               Get Free Quote
             </Button>
@@ -228,7 +228,7 @@ export default function Home() {
               size="lg" 
               className="bg-ring hover:bg-ring/90 text-primary-foreground"
               data-testid="button-cta-whatsapp"
-              onClick={() => console.log('CTA WhatsApp clicked')}
+              onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for Freshen Deluxe cleaning services.')}`, '_blank', 'noopener,noreferrer')}
             >
               WhatsApp +971 55 436 0800
             </Button>

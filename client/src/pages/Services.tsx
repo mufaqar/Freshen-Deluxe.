@@ -108,7 +108,7 @@ export default function Services() {
             size="lg"
             className="bg-primary hover:bg-primary/90"
             data-testid="button-services-quote"
-            onClick={() => console.log('Services quote clicked')}
+            onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for cleaning services.')}`, '_blank', 'noopener,noreferrer')}
           >
             Get Free Quote
           </Button>
@@ -123,7 +123,7 @@ export default function Services() {
               <ServiceCard
                 key={index}
                 {...service}
-                onGetQuote={() => console.log(`Get quote clicked for ${service.title}`)}
+                onGetQuote={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for ' + service.title + ' service.')}`, '_blank', 'noopener,noreferrer')}
               />
             ))}
           </div>
@@ -190,7 +190,7 @@ export default function Services() {
                 <Button 
                   className="w-full mt-6"
                   data-testid="button-commercial-quote"
-                  onClick={() => console.log('Commercial quote clicked')}
+                  onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for Commercial & Office Spaces cleaning service.')}`, '_blank', 'noopener,noreferrer')}
                 >
                   Request Commercial Quote
                 </Button>
@@ -226,7 +226,7 @@ export default function Services() {
                 <Button 
                   className="w-full mt-6"
                   data-testid="button-residential-quote"
-                  onClick={() => console.log('Residential quote clicked')}
+                  onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for residential cleaning services.')}`, '_blank', 'noopener,noreferrer')}
                 >
                   Get Residential Quote
                 </Button>
@@ -278,7 +278,7 @@ export default function Services() {
               variant="outline"
               className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10"
               data-testid="button-services-calculator"
-              onClick={() => console.log('Services calculator clicked')}
+              onClick={() => window.location.href = '/calculator'}
             >
               Request Quote
             </Button>
@@ -286,7 +286,7 @@ export default function Services() {
               size="lg" 
               className="bg-ring hover:bg-ring/90 text-primary-foreground"
               data-testid="button-services-whatsapp"
-              onClick={() => console.log('Services WhatsApp clicked')}
+              onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for cleaning services.')}`, '_blank', 'noopener,noreferrer')}
             >
               WhatsApp +971 55 436 0800
             </Button>
