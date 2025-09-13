@@ -18,37 +18,10 @@ export default function Calculator({ onWhatsAppQuote }: CalculatorProps) {
   const [frequency, setFrequency] = useState<string>("");
   const [area, setArea] = useState<string>("");
   
-  const [estimate, setEstimate] = useState<number | null>(null);
+  const [showQuoteRequest, setShowQuoteRequest] = useState<boolean>(false);
 
-  const calculateEstimate = () => {
-    let basePrice = 0;
-    
-    // Base pricing logic (simplified)
-    if (serviceType === "residential") {
-      if (propertyType === "regular") {
-        basePrice = parseInt(rooms) * 80; // AED 80 per room
-      } else if (propertyType === "deep") {
-        basePrice = parseInt(rooms) * 150; // AED 150 per room deep clean
-      }
-    } else if (serviceType === "airbnb") {
-      if (propertyType === "regular") {
-        basePrice = parseInt(rooms) * 100; // AED 100 per room
-      } else if (propertyType === "deep") {
-        basePrice = parseInt(rooms) * 180; // AED 180 per room deep clean
-      }
-    } else if (serviceType === "commercial") {
-      const sqm = parseInt(area);
-      basePrice = sqm * 5; // AED 5 per sqm
-    }
-
-    // Frequency discount
-    let discount = 0;
-    if (frequency === "weekly") discount = 0.15;
-    else if (frequency === "biweekly") discount = 0.10;
-    else if (frequency === "monthly") discount = 0.05;
-
-    const finalPrice = basePrice * (1 - discount);
-    setEstimate(finalPrice);
+  const handleCalculateRequest = () => {
+    setShowQuoteRequest(true);
   };
 
   const handleWhatsAppQuote = () => {
@@ -58,7 +31,6 @@ export default function Calculator({ onWhatsAppQuote }: CalculatorProps) {
       rooms,
       frequency,
       area,
-      estimate
     };
     
     if (onWhatsAppQuote) {
@@ -165,42 +137,42 @@ export default function Calculator({ onWhatsAppQuote }: CalculatorProps) {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="one-time">One-time Service</SelectItem>
-              <SelectItem value="weekly">Weekly (15% discount)</SelectItem>
-              <SelectItem value="biweekly">Bi-weekly (10% discount)</SelectItem>
-              <SelectItem value="monthly">Monthly (5% discount)</SelectItem>
+              <SelectItem value="weekly">Weekly</SelectItem>
+              <SelectItem value="biweekly">Bi-weekly</SelectItem>
+              <SelectItem value="monthly">Monthly</SelectItem>
             </SelectContent>
           </Select>
         </div>
 
         {/* Calculate Button */}
         <Button 
-          onClick={calculateEstimate}
+          onClick={handleCalculateRequest}
           disabled={!isFormValid()}
           className="w-full bg-primary hover:bg-primary/90"
           data-testid="button-calculate"
         >
-          Calculate Estimate
+          Request Quote
         </Button>
 
         {/* Results */}
-        {estimate !== null && (
+        {showQuoteRequest && (
           <div className="p-6 bg-ring/5 rounded-lg border border-ring/20">
             <div className="text-center space-y-4">
               <div>
-                <p className="text-sm text-muted-foreground mb-2">Estimated Cost</p>
-                <p className="text-3xl font-bold text-primary">
-                  AED {estimate.toFixed(0)}
+                <p className="text-lg font-semibold text-primary mb-2">Quote Request Submitted</p>
+                <p className="text-muted-foreground">
+                  Thank you for your interest! Our team will provide you with a personalized quote.
                 </p>
                 {frequency !== "one-time" && (
                   <Badge variant="secondary" className="mt-2">
-                    Recurring discount applied
+                    Recurring service selected
                   </Badge>
                 )}
               </div>
               
               <div className="pt-4 border-t border-ring/20">
                 <p className="text-sm text-muted-foreground mb-4">
-                  Ready to book? Get in touch for a detailed quote
+                  Contact us directly for immediate assistance
                 </p>
                 <Button 
                   onClick={handleWhatsAppQuote}

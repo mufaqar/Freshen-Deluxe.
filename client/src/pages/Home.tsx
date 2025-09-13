@@ -20,7 +20,6 @@ export default function Home() {
         "Eco-friendly products", 
         "Quality assurance guarantee"
       ],
-      pricing: "From AED 150/hr",
       image: officeImage,
       icon: Building2,
       popular: true
@@ -34,7 +33,6 @@ export default function Home() {
         "Premium fragrances",
         "Trusted professional staff"
       ],
-      pricing: "From AED 80/room",
       image: heroImage,
       icon: HomeIcon
     },
@@ -47,7 +45,6 @@ export default function Home() {
         "Luxury amenity placement",
         "Check-in ready guarantee"
       ],
-      pricing: "From AED 100/room",
       image: airbnbImage,
       icon: Bed
     }

@@ -20,7 +20,6 @@ export default function Services() {
         "Emergency cleaning services",
         "Customized cleaning checklists"
       ],
-      pricing: "From AED 150/hr",
       image: officeImage,
       icon: Building2,
       popular: false
@@ -36,7 +35,6 @@ export default function Services() {
         "Quality guarantee on all services",
         "Eco-friendly products available"
       ],
-      pricing: "From AED 80/room",
       image: heroImage,
       icon: HomeIcon,
       popular: true
@@ -52,7 +50,6 @@ export default function Services() {
         "Window and blind cleaning",
         "Move-in/move-out ready guarantee"
       ],
-      pricing: "From AED 150/room",
       image: heroImage,
       icon: HomeIcon
     },
@@ -67,7 +64,6 @@ export default function Services() {
         "Welcome touches and setup",
         "Check-in ready guarantee"
       ],
-      pricing: "From AED 100/room",
       image: airbnbImage,
       icon: Bed,
       popular: true
@@ -83,7 +79,6 @@ export default function Services() {
         "Seasonal maintenance tasks",
         "Property condition reporting"
       ],
-      pricing: "From AED 180/room",
       image: airbnbImage,
       icon: Bed
     }
@@ -204,7 +199,7 @@ export default function Services() {
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-ring rounded-full mr-3"></div>
-                    <span className="text-muted-foreground">Competitive pricing by hour or area</span>
+                    <span className="text-muted-foreground">Flexible service arrangements</span>
                   </div>
                 </div>
                 <Button 
@@ -228,11 +223,11 @@ export default function Services() {
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-ring rounded-full mr-3"></div>
-                    <span className="text-muted-foreground">Room-based pricing structure</span>
+                    <span className="text-muted-foreground">Room-based service structure</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-ring rounded-full mr-3"></div>
-                    <span className="text-muted-foreground">Volume discounts available</span>
+                    <span className="text-muted-foreground">Volume service packages available</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-ring rounded-full mr-3"></div>
@@ -300,7 +295,7 @@ export default function Services() {
               data-testid="button-services-calculator"
               onClick={() => console.log('Services calculator clicked')}
             >
-              Use Price Calculator
+              Request Quote
             </Button>
             <Button 
               size="lg" 

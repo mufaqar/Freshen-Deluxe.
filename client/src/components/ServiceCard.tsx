@@ -7,7 +7,6 @@ interface ServiceCardProps {
   title: string;
   description: string;
   features: string[];
-  pricing: string;
   image: string;
   icon: LucideIcon;
   popular?: boolean;
@@ -18,7 +17,6 @@ export default function ServiceCard({
   title,
   description,
   features,
-  pricing,
   image,
   icon: Icon,
   popular = false,
@@ -64,10 +62,6 @@ export default function ServiceCard({
         </div>
 
         <div className="pt-4 border-t border-border">
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-2xl font-bold text-primary">{pricing}</span>
-          </div>
-          
           <Button 
             className="w-full bg-primary hover:bg-primary/90"
             onClick={onGetQuote}
