@@ -63,12 +63,12 @@ export default function About() {
               About Us
             </Badge>
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
-              Born from Luxury{" "}
-              <span className="text-ring">Hospitality</span>
+              For Those Who Value{" "}
+              <span className="text-ring">Quality</span>
             </h1>
             <p className="text-xl text-white/90 leading-relaxed">
-              Freshen Deluxe is a boutique cleaning company in Dubai with a clear purpose: 
-              to deliver a level of service that goes far beyond 'cleaning'.
+              We don't aim to be the biggest cleaning company in Dubai. We aim to be the most trusted. 
+              We don't just clean homes... we curate spaces that embody elegance.
             </p>
           </div>
         </div>
@@ -84,9 +84,10 @@ export default function About() {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground">
                 <p>
-                  Born from a deep understanding of the luxury hospitality world, Freshen Deluxe 
-                  was created to bring five-star hotel standards to residential and commercial 
-                  cleaning services in Dubai.
+                  Crafted from a background in five-star hospitality, we bring hotel-level precision 
+                  to private residences, holiday homes, and premium commercial spaces across Dubai. 
+                  Our team is trained to H10 cleaning standards - the rigorous protocols used in the 
+                  world's leading five-star hotels.
                 </p>
                 <p>
                   We focus on creating spaces where every detail is noticed and cared for. 

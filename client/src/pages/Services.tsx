@@ -10,77 +10,62 @@ import airbnbImage from "@assets/pexels-cottonbro-6466302_1757788137478.jpg";
 export default function Services() {
   const services = [
     {
-      title: "Commercial Cleaning",
-      description: "Premium office and retail space cleaning with hospitality standards. Tailored quotes based on square meters or hourly requirements.",
+      title: "The Regular Refresh",
+      description: "Perfect for weekly care with five-star hospitality standards. Maintaining your space with the precision of Dubai's finest hotels.",
       features: [
-        "Deep sanitization protocols",
-        "Flexible scheduling (daily, weekly, monthly)",
-        "Eco-friendly commercial-grade products", 
-        "Quality assurance inspections",
-        "Emergency cleaning services",
-        "Customized cleaning checklists"
-      ],
-      image: officeImage,
-      icon: Building2,
-      popular: false
-    },
-    {
-      title: "Residential Regular Refresh",
-      description: "Luxury home cleaning that maintains your space with five-star hospitality standards. Perfect for ongoing maintenance.",
-      features: [
-        "Comprehensive room-by-room cleaning",
-        "Premium fragrances and touches",
-        "Trusted, background-checked staff",
-        "Flexible scheduling options",
-        "Quality guarantee on all services",
-        "Eco-friendly products available"
+        "Meticulous floor care and vacuuming",
+        "Kitchen sanitization and shine restoration",
+        "Bathroom deep disinfection",
+        "Hotel-style linen presentation",
+        "Light ambient signature fragrance",
+        "Quality inspection using H10 standards"
       ],
       image: heroImage,
       icon: HomeIcon,
       popular: true
     },
     {
-      title: "Residential Deep Cleaning",
-      description: "Intensive cleaning service for move-ins, end-of-lease, or seasonal deep cleans. Every corner receives meticulous attention.",
+      title: "The Complete Clean",
+      description: "Indulgent deep clean, restoring brilliance to every detail. Our most comprehensive service for those who demand perfection.",
       features: [
-        "Complete deep sanitization",
-        "Inside appliance cleaning",
-        "Detailed bathroom and kitchen work",
-        "Baseboard and ceiling fan cleaning",
-        "Window and blind cleaning",
-        "Move-in/move-out ready guarantee"
+        "Enhanced kitchen and bathroom disinfection",
+        "Detailed glass, mirrors & blinds cleaning",
+        "Careful attention to carpets and upholstery",
+        "Light ambient signature fragrance",
+        "Premium touch finishing",
+        "Complete property reset"
       ],
-      image: heroImage,
-      icon: HomeIcon
+      image: officeImage,
+      icon: Building2
     },
     {
-      title: "Airbnb Regular Refresh",
-      description: "Fast turnaround cleaning between guests with hospitality-grade standards. Ensuring perfect guest experiences every time.",
+      title: "Holiday Home & Airbnb Services",
+      description: "Tailored for discerning hosts who want to impress their guests. Ensuring five-star experiences that generate exceptional reviews.",
       features: [
-        "Quick turnaround (2-4 hours)",
-        "Guest-ready inspection standards",
-        "Luxury amenity placement",
-        "Linen and towel refresh",
-        "Welcome touches and setup",
-        "Check-in ready guarantee"
+        "Pre-arrival property inspection",
+        "Professional cleaning with Freshen Deluxe touch",
+        "Before & after photo documentation",
+        "Lost & found management",
+        "Guest amenity coordination",
+        "Priority turnaround scheduling"
       ],
       image: airbnbImage,
       icon: Bed,
       popular: true
     },
     {
-      title: "Airbnb Deep Cleaning",
-      description: "Comprehensive monthly or quarterly deep cleans for Airbnb properties to maintain the highest hospitality standards.",
+      title: "Commercial & Office Spaces",
+      description: "Bringing hospitality-level precision to your business environment. Creating spaces that reflect your company's commitment to quality.",
       features: [
-        "Complete property deep clean",
-        "Appliance maintenance cleaning",
-        "Detailed bathroom sanitization",
-        "Furniture and upholstery care",
-        "Seasonal maintenance tasks",
-        "Property condition reporting"
+        "H10 cleaning standards implementation",
+        "Flexible scheduling for business operations",
+        "Deep sanitization protocols",
+        "Professional presentation maintenance",
+        "Eco-conscious cleaning solutions",
+        "Quality assurance reporting"
       ],
-      image: airbnbImage,
-      icon: Bed
+      image: officeImage,
+      icon: Building2
     }
   ];
 
@@ -112,12 +97,12 @@ export default function Services() {
             Our Services
           </Badge>
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-primary mb-6 leading-tight">
-            Boutique Cleaning{" "}
-            <span className="text-ring">Excellence</span>
+            Curating Spaces That{" "}
+            <span className="text-ring">Embody Elegance</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            From commercial spaces to luxury residences and Airbnb properties, we deliver 
-            hospitality-level service with unmatched attention to detail across Dubai.
+            We don't aim to be the biggest cleaning company in Dubai. We aim to be the most trusted. 
+            Each service is crafted with H10 standards - the protocols used in the world's leading five-star hotels.
           </p>
           <Button 
             size="lg"

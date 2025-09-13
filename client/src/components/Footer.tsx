@@ -40,28 +40,28 @@ export default function Footer({ className = "" }: FooterProps) {
               <li>
                 <Link href="/services">
                   <span className="hover:text-ring transition-colors cursor-pointer" data-testid="link-commercial-cleaning">
-                    Commercial Cleaning
+                    Commercial & Office Spaces
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/services">
                   <span className="hover:text-ring transition-colors cursor-pointer" data-testid="link-residential-cleaning">
-                    Residential Cleaning
+                    The Regular Refresh
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/services">
                   <span className="hover:text-ring transition-colors cursor-pointer" data-testid="link-airbnb-cleaning">
-                    Airbnb Cleaning
+                    Holiday Home & Airbnb Services
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/services">
                   <span className="hover:text-ring transition-colors cursor-pointer" data-testid="link-deep-cleaning">
-                    Deep Cleaning
+                    The Complete Clean
                   </span>
                 </Link>
               </li>
