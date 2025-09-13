@@ -3,8 +3,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MessageSquare, Phone, Mail, MapPin } from "lucide-react";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function CalculatorPage() {
+  useSEO({
+    title: 'Cleaning Service Price Calculator - Freshen Deluxe Dubai',
+    description: 'Get instant quotes for luxury cleaning services in Dubai. Calculate prices for residential, commercial, and Airbnb cleaning with our transparent pricing tool.',
+    keywords: 'cleaning price calculator Dubai, cleaning service cost, instant cleaning quote, Dubai cleaning prices, luxury cleaning rates'
+  });
+
   const handleWhatsAppQuote = (details: any) => {
     const message = `Hi! I'd like a quote for:
 Service: ${details.serviceType}

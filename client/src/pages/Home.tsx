@@ -4,12 +4,19 @@ import { Building2, Home as HomeIcon, Bed } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useSEO } from "@/hooks/use-seo";
 import heroImage from "@assets/pexels-cottonbro-6466492_1757788137475.jpg";
 import officeImage from "@assets/pexels-cottonbro-6466226_1757788137471.jpg";
 import airbnbImage from "@assets/pexels-cottonbro-6466302_1757788137478.jpg";
 import teamImage from "@assets/pexels-cottonbro-6466216_1757788137470.jpg";
 
 export default function Home() {
+  useSEO({
+    title: 'Freshen Deluxe - Dubai\'s Most Trusted Luxury Cleaning Services',
+    description: 'For those who value quality. We curate spaces that embody elegance with H10 cleaning standards. Premium boutique cleaning for residential, commercial, and Airbnb properties in Dubai.',
+    keywords: 'luxury cleaning Dubai, boutique cleaning services, H10 cleaning standards, residential cleaning Dubai, commercial cleaning, Airbnb cleaning, five-star cleaning'
+  });
+
   const services = [
     {
       title: "The Regular Refresh",

@@ -2,10 +2,17 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Heart, Award, Users, Sparkles } from "lucide-react";
+import { useSEO } from "@/hooks/use-seo";
 import teamImage from "@assets/pexels-cottonbro-6466216_1757788137470.jpg";
 import heroImage from "@assets/pexels-cottonbro-6466492_1757788137475.jpg";
 
 export default function About() {
+  useSEO({
+    title: 'About Freshen Deluxe - Dubai\'s Most Trusted Luxury Cleaning Company',
+    description: 'For those who value quality. Born from luxury hospitality, we bring H10 cleaning standards to Dubai. The most trusted name in luxury property care with five-star service.',
+    keywords: 'about Freshen Deluxe, luxury cleaning company Dubai, hospitality cleaning standards, five-star cleaning service, boutique cleaning Dubai'
+  });
+
   //todo: remove mock functionality
   const values = [
     {

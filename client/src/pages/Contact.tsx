@@ -3,8 +3,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Clock, Shield, Award, Sparkles } from "lucide-react";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function Contact() {
+  useSEO({
+    title: 'Contact Freshen Deluxe - Get Your Luxury Cleaning Quote in Dubai',
+    description: 'Contact Dubai\'s most trusted luxury cleaning service. Get personalized quotes for residential, commercial, and Airbnb cleaning. 24hr response guaranteed.',
+    keywords: 'contact Freshen Deluxe, cleaning quote Dubai, luxury cleaning contact, Dubai cleaning service contact, get cleaning quote'
+  });
+
   const handleFormSubmit = (data: any) => {
     // In a real app, this would send the email
     console.log('Contact form submitted:', data);

@@ -3,11 +3,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Building2, Home as HomeIcon, Bed, Clock, Shield, Sparkles } from "lucide-react";
+import { useSEO } from "@/hooks/use-seo";
 import heroImage from "@assets/pexels-cottonbro-6466492_1757788137475.jpg";
 import officeImage from "@assets/pexels-cottonbro-6466226_1757788137471.jpg";
 import airbnbImage from "@assets/pexels-cottonbro-6466302_1757788137478.jpg";
 
 export default function Services() {
+  useSEO({
+    title: 'Premium Cleaning Services Dubai - Freshen Deluxe',
+    description: 'Discover our curated cleaning services: The Regular Refresh, The Complete Clean, Holiday Home & Airbnb Services, and Commercial & Office Spaces. H10 standards, luxury touches.',
+    keywords: 'cleaning services Dubai, regular refresh cleaning, complete deep clean, Airbnb cleaning Dubai, commercial cleaning, office cleaning, H10 cleaning standards'
+  });
+
   const services = [
     {
       title: "The Regular Refresh",
