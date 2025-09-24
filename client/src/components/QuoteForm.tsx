@@ -123,7 +123,7 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <Badge className="mb-4 bg-ring/10 text-ring">Get Your Quote</Badge>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
+          <h1 className="text-4xl md:text-5xl  text-primary mb-6">
             Request Your Personalized Quote
           </h1>
           <p className="text-xl text-muted-foreground">

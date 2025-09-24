@@ -1,44 +1,63 @@
 import ServiceCard from "@/components/ServiceCard";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Building2, Home as HomeIcon, Bed, Clock, Shield, Sparkles, ChevronDown } from "lucide-react";
+import {
+  Building2,
+  Home as HomeIcon,
+  Bed,
+  Clock,
+  Shield,
+  Sparkles,
+  ChevronDown,
+} from "lucide-react";
 import { useSEO } from "@/hooks/use-seo";
 import { useState } from "react";
 import { Link } from "wouter";
 import heroImage from "@assets/pexels-cottonbro-6466492_1757788137475.jpg";
 import officeImage from "@assets/pexels-cottonbro-6466226_1757788137471.jpg";
 import airbnbImage from "@assets/pexels-cottonbro-6466302_1757788137478.jpg";
+import SectionHeading from "@/components/SectionHeading";
 
 export default function Services() {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   useSEO({
-    title: 'Premium Cleaning Services Dubai - Freshen Deluxe',
-    description: 'Discover our curated cleaning services: The Regular Refresh, The Complete Clean, Holiday Home & Airbnb Services, and Commercial & Office Spaces. H10 standards, luxury touches.',
-    keywords: 'cleaning services Dubai, regular refresh cleaning, complete deep clean, Airbnb cleaning Dubai, commercial cleaning, office cleaning, H10 cleaning standards'
+    title: "Premium Cleaning Services Dubai - Freshen Deluxe",
+    description:
+      "Discover our curated cleaning services: The Regular Refresh, The Complete Clean, Holiday Home & Airbnb Services, and Commercial & Office Spaces. H10 standards, luxury touches.",
+    keywords:
+      "cleaning services Dubai, regular refresh cleaning, complete deep clean, Airbnb cleaning Dubai, commercial cleaning, office cleaning, H10 cleaning standards",
   });
 
   const services = [
     {
       title: "Residential Cleaning",
-      description: "Your home, effortlessly flawless. We handle every detail so you can simply enjoy living in a space that feels fresh, calm, and cared for.",
+      description:
+        "Your home, effortlessly flawless. We handle every detail so you can simply enjoy living in a space that feels fresh, calm, and cared for.",
       features: [
         "Dusting and wiping all surfaces, furniture, and floors",
         "Vacuuming and mopping floors",
         "Bathroom cleaning and sanitization",
         "Kitchen: counters, appliances, sink, and exterior cabinets",
         "Light organization and bed linen change",
-        "Emptying bins and waste management"
+        "Emptying bins and waste management",
       ],
       image: heroImage,
       icon: HomeIcon,
-      popular: true
+      popular: true,
     },
     {
       title: "Deep Cleaning",
-      description: "Every corner counts. Whether it's after a renovation, a move, end-of-lease, or just because your home deserves it, we refresh your property with precision and care, leaving it spotless and revitalized.",
+      description:
+        "Every corner counts. Whether it's after a renovation, a move, end-of-lease, or just because your home deserves it, we refresh your property with precision and care, leaving it spotless and revitalized.",
       features: [
         "Dusting and wiping all surfaces, furniture, and floors",
         "Vacuuming and mopping floors",
@@ -51,29 +70,31 @@ export default function Services() {
         "Carpet and upholstery steam cleaning",
         "Post-renovation, post-move, end-of-lease, or general deep refresh",
         "Walls, doors, and cabinets cleaned inside and out",
-        "Complete sanitization of all spaces"
+        "Complete sanitization of all spaces",
       ],
       image: officeImage,
-      icon: Building2
+      icon: Building2,
     },
     {
       title: "Holiday Homes Cleaning",
-      description: "First impressions matter. We prepare your holiday rental to perfection, ensuring every guest walks into a space that feels welcoming, polished, and unforgettable.",
+      description:
+        "First impressions matter. We prepare your holiday rental to perfection, ensuring every guest walks into a space that feels welcoming, polished, and unforgettable.",
       features: [
         "Complete property cleaning and sanitization",
         "Kitchen and bathroom deep cleaning",
         "Living areas and bedroom preparation",
         "Priority turnaround scheduling for guest arrivals",
-        "Quality inspection and final touches"
+        "Quality inspection and final touches",
       ],
       image: airbnbImage,
       icon: Bed,
       popular: true,
-      specialTouches: true
+      specialTouches: true,
     },
     {
       title: "Commercial Cleaning",
-      description: "Impress at every turn. Perfect for buildings, facilities, lobbies, and staircases, our team creates immaculate spaces that reflect professionalism, attention to detail, and care for everyone who steps inside.",
+      description:
+        "Impress at every turn. Perfect for buildings, facilities, lobbies, and staircases, our team creates immaculate spaces that reflect professionalism, attention to detail, and care for everyone who steps inside.",
       features: [
         "Cleaning of buildings and offices: lobbies, hallways, staircases, and elevators",
         "Disinfection of common areas",
@@ -81,11 +102,11 @@ export default function Services() {
         "Floors: sweeping, mopping, vacuuming as appropriate",
         "Glass and window cleaning (interior and accessible exterior)",
         "Bathroom cleaning and sanitization",
-        "Attention to details reflecting professionalism for clients and staff"
+        "Attention to details reflecting professionalism for clients and staff",
       ],
       image: officeImage,
-      icon: Building2
-    }
+      icon: Building2,
+    },
   ];
 
   //todo: remove mock functionality
@@ -93,18 +114,19 @@ export default function Services() {
     {
       icon: Clock,
       title: "Flexible Scheduling",
-      description: "Service times that work with your lifestyle and business hours"
+      description:
+        "Service times that work with your lifestyle and business hours",
     },
     {
       icon: Shield,
       title: "Fully Insured",
-      description: "Complete insurance coverage for your peace of mind"
+      description: "Complete insurance coverage for your peace of mind",
     },
     {
       icon: Sparkles,
       title: "Luxury Touches",
-      description: "Premium fragrances, chocolates, and thoughtful details"
-    }
+      description: "Premium fragrances, chocolates, and thoughtful details",
+    },
   ];
 
   return (
@@ -112,29 +134,37 @@ export default function Services() {
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={officeImage} 
+          <img
+            src={officeImage}
             alt="Luxury cleaning service"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-         
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-ring mb-6 leading-tight text-center">
+          <h1 className="text-4xl md:text-6xl  text-ring mb-6 leading-tight text-center">
             Premium Cleaning Services
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-            We aim to be the best cleaning company in Dubai. Each service is crafted with H10 standards - 
-            the protocols used in the world's leading five-star hotels, ensuring exceptional quality and trust.
+            We aim to be the best cleaning company in Dubai. Each service is
+            crafted with H10 standards - the protocols used in the world's
+            leading five-star hotels, ensuring exceptional quality and trust.
           </p>
-          <Button 
+          <Button
             size="lg"
             className="bg-ring hover:bg-ring/90 text-primary-foreground font-semibold px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
             data-testid="button-services-quote"
-            onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for cleaning services.')}`, '_blank', 'noopener,noreferrer')}
+            onClick={() =>
+              window.open(
+                `https://wa.me/971554360800?text=${encodeURIComponent(
+                  "Hello! I would like to get a quote for cleaning services."
+                )}`,
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
           >
-            Get Quote
+           Instant Quote
           </Button>
         </div>
       </section>
@@ -146,126 +176,156 @@ export default function Services() {
             {services.map((service, index) => {
               const isExpanded = expandedCard === index;
               const Icon = service.icon;
-              
+
               return (
-                <Card 
-                key={index}
+                <Card
+                  key={index}
                   className={`w-64 transition-all duration-300 cursor-pointer overflow-hidden ${
-                    isExpanded ? 'w-96 shadow-lg' : 'hover:shadow-md'
+                    isExpanded ? "w-96 shadow-lg" : "hover:shadow-md"
                   }`}
                   onClick={() => setExpandedCard(isExpanded ? null : index)}
                 >
                   {/* Service Image */}
-                  <div 
+                  <div
                     className="relative h-32 overflow-hidden cursor-pointer"
                     onMouseEnter={() => setHoveredCard(index)}
                     onMouseLeave={() => setHoveredCard(null)}
                   >
-                    <img 
-                      src={service.image} 
+                    <img
+                      src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                    
+
                     {/* View More Overlay */}
-                    <div className={`absolute inset-0 bg-black/80 flex items-center justify-center transition-all duration-300 z-20 ${
-                      hoveredCard === index ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                    }`}>
+                    <div
+                      className={`absolute inset-0 bg-black/80 flex items-center justify-center transition-all duration-300 z-20 ${
+                        hoveredCard === index
+                          ? "opacity-100"
+                          : "opacity-0 pointer-events-none"
+                      }`}
+                    >
                       <div className="text-center text-white">
                         <div className="text-lg font-bold mb-1">View More</div>
-                        <div className="text-xs opacity-90">Click to expand</div>
+                        <div className="text-xs opacity-90">
+                          Click to expand
+                        </div>
                       </div>
                     </div>
-                    
+
                     <div className="absolute top-3 left-3">
                       <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                         <Icon className="h-4 w-4 text-white" />
                       </div>
                     </div>
                   </div>
-                  
+
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
                       <div>
-                        <CardTitle className="text-lg font-semibold text-primary">
+                        <CardTitle className="text-lg text-primary bebas_neue">
                           {service.title}
                         </CardTitle>
                       </div>
-                      <ChevronDown 
+                      <ChevronDown
                         className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ${
-                          isExpanded ? 'rotate-180' : ''
-                        }`} 
+                          isExpanded ? "rotate-180" : ""
+                        }`}
                       />
                     </div>
                   </CardHeader>
-                  
+
                   <CardContent className="pt-0">
                     <CardDescription className="text-sm text-muted-foreground mb-4">
                       {service.description}
                     </CardDescription>
-                    
+
                     {isExpanded && (
                       <div className="space-y-4 animate-in slide-in-from-top-2 duration-300">
                         <div>
-                          <h4 className="text-sm font-semibold text-primary mb-2">What's Included:</h4>
+                          <h4 className="text-sm  text-primary mb-2">
+                            What's Included:
+                          </h4>
                           <ul className="space-y-1">
                             {service.features.map((feature, featureIndex) => (
-                              <li key={featureIndex} className="text-xs text-muted-foreground flex items-start">
+                              <li
+                                key={featureIndex}
+                                className="text-xs text-muted-foreground flex items-start"
+                              >
                                 <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-2 flex-shrink-0"></span>
                                 {feature}
                               </li>
                             ))}
                           </ul>
                         </div>
-                        
-                               {service.specialTouches && (
-                                 <div className="bg-ring/5 p-4 rounded-lg">
-                                   <h4 className="text-sm font-semibold text-ring mb-3">Luxury Touches:</h4>
-                                   <ul className="space-y-2">
-                                     <li className="text-xs text-muted-foreground flex items-start">
-                                       <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                       <div>
-                                         <strong>Pre-check visit:</strong> A team member inspects the property before guest arrival to ensure everything is perfect
-                                       </div>
-                                     </li>
-                                     <li className="text-xs text-muted-foreground flex items-start">
-                                       <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                       <div>
-                                         <strong>Light ambient scent:</strong> A subtle fragrance throughout the apartment from a premium brand
-                                       </div>
-                                     </li>
-                                     <li className="text-xs text-muted-foreground flex items-start">
-                                       <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                       <div>
-                                         <strong>Welcome gift:</strong> Luxury chocolates as a thoughtful touch
-                                       </div>
-                                     </li>
-                                     <li className="text-xs text-muted-foreground flex items-start">
-                                       <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                       <div>
-                                         <strong>Property photos:</strong> Before and after cleaning for documentation and peace of mind
-                                       </div>
-                                     </li>
-                                     <li className="text-xs text-muted-foreground flex items-start">
-                                       <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                       <div>
-                                         <strong>Linen service (extra cost):</strong> Hotel-quality sheets and towels ready for guests
-                                       </div>
-                                     </li>
-                                   </ul>
-                                 </div>
-                               )}
-                        
-                        <Button 
-                          size="sm" 
+
+                        {service.specialTouches && (
+                          <div className="bg-ring/5 p-4 rounded-lg">
+                            <h4 className="text-sm font-semibold text-ring mb-3">
+                              Luxury Touches:
+                            </h4>
+                            <ul className="space-y-2">
+                              <li className="text-xs text-muted-foreground flex items-start">
+                                <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                <div>
+                                  <strong>Pre-check visit:</strong> A team
+                                  member inspects the property before guest
+                                  arrival to ensure everything is perfect
+                                </div>
+                              </li>
+                              <li className="text-xs text-muted-foreground flex items-start">
+                                <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                <div>
+                                  <strong>Light ambient scent:</strong> A subtle
+                                  fragrance throughout the apartment from a
+                                  premium brand
+                                </div>
+                              </li>
+                              <li className="text-xs text-muted-foreground flex items-start">
+                                <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                <div>
+                                  <strong>Welcome gift:</strong> Luxury
+                                  chocolates as a thoughtful touch
+                                </div>
+                              </li>
+                              <li className="text-xs text-muted-foreground flex items-start">
+                                <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                <div>
+                                  <strong>Property photos:</strong> Before and
+                                  after cleaning for documentation and peace of
+                                  mind
+                                </div>
+                              </li>
+                              <li className="text-xs text-muted-foreground flex items-start">
+                                <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                <div>
+                                  <strong>Linen service (extra cost):</strong>{" "}
+                                  Hotel-quality sheets and towels ready for
+                                  guests
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        )}
+
+                        <Button
+                          size="sm"
                           className="w-full bg-ring hover:bg-ring/90 text-primary-foreground"
                           onClick={(e) => {
                             e.stopPropagation();
-                            window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for ' + service.title + ' service.')}`, '_blank', 'noopener,noreferrer');
+                            window.open(
+                              `https://wa.me/971554360800?text=${encodeURIComponent(
+                                "Hello! I would like to get a quote for " +
+                                  service.title +
+                                  " service."
+                              )}`,
+                              "_blank",
+                              "noopener,noreferrer"
+                            );
                           }}
                         >
-                          Get Quote
+                        Instant Quote
                         </Button>
                       </div>
                     )}
@@ -281,50 +341,51 @@ export default function Services() {
       <section className="py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-ring/10 text-ring" data-testid="badge-features">
-              Why Choose Us
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-ring mb-6 text-center">
-              Service Excellence
-            </h2>
+            <SectionHeading
+              title=" Service Excellence"
+              subtitle="  Why Choose Us"
+            />
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Every service comes with our commitment to luxury hospitality standards 
-              and complete client satisfaction.
+              Every service comes with our commitment to luxury hospitality
+              standards and complete client satisfaction.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
-              <Card key={index} className="text-center hover-elevate" data-testid={`feature-${index}`}>
+              <Card
+                key={index}
+                className="text-center hover-elevate"
+                data-testid={`feature-${index}`}
+              >
                 <CardContent className="p-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-ring/10 rounded-full mb-6">
                     <feature.icon className="h-8 w-8 text-ring" />
                   </div>
-                  <h3 className="text-xl font-semibold text-primary mb-4">{feature.title}</h3>
+                  <h3 className="text-xl text-primary mb-4">
+                    {feature.title}
+                  </h3>
                   <p className="text-muted-foreground">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
-
-         
         </div>
       </section>
-
 
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ring mb-6 text-center">
+          <h2 className="text-4xl md:text-5xl  text-ring mb-6 text-center">
             Ready to Experience Luxury Cleaning?
           </h2>
           <p className="text-xl opacity-90 mb-8">
-            Contact us today for a personalized quote tailored to your specific needs. 
-            Experience the difference boutique service makes.
+            Contact us today for a personalized quote tailored to your specific
+            needs. Experience the difference boutique service makes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/instant-quote">
-              <Button 
+              <Button
                 size="sm"
                 variant="outline"
                 className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 sm:size-default lg:size-lg"
@@ -333,11 +394,19 @@ export default function Services() {
                 Request Quote
               </Button>
             </Link>
-            <Button 
-              size="sm" 
+            <Button
+              size="sm"
               className="bg-ring hover:bg-ring/90 text-primary-foreground sm:size-default lg:size-lg"
               data-testid="button-services-whatsapp"
-              onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for cleaning services.')}`, '_blank', 'noopener,noreferrer')}
+              onClick={() =>
+                window.open(
+                  `https://wa.me/971554360800?text=${encodeURIComponent(
+                    "Hello! I would like to get a quote for cleaning services."
+                  )}`,
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
             >
               WhatsApp +971 55 436 0800
             </Button>

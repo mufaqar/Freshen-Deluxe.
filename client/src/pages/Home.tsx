@@ -85,7 +85,7 @@ export default function Home() {
             <Badge className="mb-4 bg-ring/10 text-ring" data-testid="badge-testimonials">
               Testimonials
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
+            <h2 className="text-4xl md:text-5xl  text-primary mb-6">
               What Our Clients Say
             </h2>
           </div>
@@ -116,7 +116,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl  mb-6">
             Ready to Experience Dubai's Most Luxurious Cleaning?
           </h2>
           <p className="text-xl opacity-90 mb-8">
@@ -131,7 +131,7 @@ export default function Home() {
                 className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 backdrop-blur-sm sm:size-default lg:size-lg"
                 data-testid="button-cta-contact"
               >
-                Get Quote
+                Instant Quote
               </Button>
             </Link>
             <Button 

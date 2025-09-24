@@ -180,7 +180,7 @@ export default function Calculator({ onWhatsAppQuote }: CalculatorProps) {
                   data-testid="button-whatsapp-quote"
                 >
                   <MessageSquare className="mr-2 h-4 w-4" />
-                  Get Quote on WhatsApp
+                  Instant Quote on WhatsApp
                 </Button>
               </div>
             </div>

@@ -11,7 +11,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({ subtitle, title }) => {
       <h6 className="mb-4 text-ring text-[96px] font-bold opacity-20 nautigal_font">
         {subtitle}
       </h6>
-      <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6 mt-[-60px]">
+      <h2 className="text-4xl md:text-5xl text-primary mb-6 mt-[-60px] bebas_neue">
         {title}
       </h2>
     </div>

@@ -50,7 +50,7 @@ export default function MinimalistServices({ services }: MinimalistServicesProps
         <div className="text-center mb-20">
           <div className="relative inline-block">
             <div className="absolute -inset-4 bg-gradient-to-r from-ring/20 via-ring/10 to-ring/20 rounded-full blur-xl"></div>
-            <h2 className="relative text-2xl md:text-3xl font-serif font-light text-ring tracking-wider mb-4">
+            <h2 className="relative text-2xl md:text-3xl  text-ring  mb-4">
               OUR SERVICES
             </h2>
           </div>
@@ -87,7 +87,7 @@ export default function MinimalistServices({ services }: MinimalistServicesProps
                 </div>
                 
                 <div className="text-center">
-                  <h3 className="text-xl font-serif font-bold text-ring tracking-wider mb-3">
+                  <h3 className="text-xl  text-ring tracking-wider mb-3">
                     {service.title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">

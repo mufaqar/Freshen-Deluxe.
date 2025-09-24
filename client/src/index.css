@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=The+Nautigal:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -50,6 +50,29 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.bebas_neue {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+ font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1.5px;
+}
+
+.nav_item {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+}
+
 
 
 @keyframes slideInLeft {

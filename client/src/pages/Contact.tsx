@@ -60,7 +60,7 @@ export default function Contact() {
           <Badge className="mb-6 bg-ring/10 text-ring" data-testid="badge-contact">
             Contact Us
           </Badge>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
+          <h1 className="text-4xl md:text-5xl  text-primary mb-6">
             Ready to{" "}
             <span className="text-ring">Get Started?</span>
           </h1>
@@ -82,7 +82,7 @@ export default function Contact() {
       <section className="py-16 bg-card">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-bold text-primary mb-4">
+            <h2 className="text-3xl  text-primary mb-4">
               Business Hours
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -117,7 +117,7 @@ export default function Contact() {
             <Badge className="mb-4 bg-ring/10 text-ring" data-testid="badge-guarantees">
               Our Commitment
             </Badge>
-            <h2 className="text-4xl font-serif font-bold text-primary mb-6">
+            <h2 className="text-4xl  text-primary mb-6">
               Service Guarantees
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -146,7 +146,7 @@ export default function Contact() {
       <section className="py-20 bg-card">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-serif font-bold text-primary mb-4">
+            <h2 className="text-3xl  text-primary mb-4">
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -213,7 +213,7 @@ export default function Contact() {
       {/* Final CTA */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl  mb-6">
             Experience Luxury Cleaning Today
           </h2>
           <p className="text-xl opacity-90 mb-8">

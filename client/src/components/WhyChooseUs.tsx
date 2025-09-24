@@ -77,7 +77,7 @@ export default function WhyChooseUs() {
         <div className="text-center mb-20">
           <div className="relative inline-block">
             <div className="absolute -inset-4 bg-gradient-to-r from-ring/20 via-ring/10 to-ring/20 rounded-full blur-xl"></div>
-            <h2 className="relative text-2xl md:text-3xl font-serif font-light text-ring tracking-wider mb-4">
+            <h2 className="relative text-2xl md:text-3xl  text-ring  mb-4">
               WHY CHOOSE US
             </h2>
           </div>
@@ -105,7 +105,7 @@ export default function WhyChooseUs() {
                   <div className="absolute -inset-2 bg-gradient-to-r from-ring/10 to-amber-200/20 rounded-full blur-md opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 
-                <h3 className="text-lg font-semibold text-ring mb-2 tracking-wide">
+                <h3 className="text-lg  text-ring mb-2 ">
                   {item.text}
                 </h3>
               </div>

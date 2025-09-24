@@ -120,7 +120,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-ring mb-6">
+            <h1 className="text-4xl md:text-6xl  text-ring mb-6">
               For Those Who Value Quality
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
@@ -167,7 +167,7 @@ export default function About() {
               iconStyle={{ background: "#d6b771", color: "#fff" }}
               icon={item.icon}
             >
-              <h3 className="vertical-timeline-element-title text-2xl font-bold">
+              <h3 className=" text-2xl ">
                 {item.title}
               </h3>
               <p className="text-[#d6b771]">{item.description}</p>
@@ -196,7 +196,7 @@ export default function About() {
                 data-testid={`value-${index}`}
               >
                 <CardContent className="p-8">
-                  <h3 className="text-xl font-semibold text-primary mb-4">
+                  <h3 className="text-xl text-primary mb-4">
                     {value.title}
                   </h3>
                   <p className="text-muted-foreground">{value.description}</p>
@@ -256,7 +256,7 @@ export default function About() {
             </div>
 
             <div className="order-1 lg:order-2">
-              <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
+              <h3 className="text-3xl md:text-4xl  text-primary mb-4">
                 {ceo.name}
               </h3>
               <p className="text-xl text-ring font-semibold mb-6">{ceo.role}</p>
@@ -271,7 +271,7 @@ export default function About() {
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl  mb-6">
             Experience the Difference
           </h2>
           <p className="text-xl opacity-90 mb-8">

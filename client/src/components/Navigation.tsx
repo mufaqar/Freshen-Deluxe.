@@ -34,7 +34,7 @@ export default function Navigation({ className = "" }: NavigationProps) {
             {navItems.map((item) => (
               <Link key={item.path} href={item.path}>
                 <span 
-                  className={`text-sm font-medium transition-all duration-300 cursor-pointer hover:scale-105 ${
+                  className={`text-sm nav_item  transition-all duration-300 cursor-pointer hover:scale-105 ${
                     isActive(item.path) 
                       ? "text-ring" 
                       : "text-foreground hover:text-ring"
@@ -64,7 +64,7 @@ export default function Navigation({ className = "" }: NavigationProps) {
           <div className="hidden lg:flex items-center justify-end flex-1">
             <Link href="/contact">
               <Button 
-                className="bg-ring hover:bg-ring/90 text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-primary hover:bg-ring/90 text-white transition-all duration-300 hover:scale-105"
                 data-testid="button-contact-us"
               >
                 Contact Us

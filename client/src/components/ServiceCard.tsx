@@ -99,7 +99,7 @@ export default function ServiceCard({
             onClick={onGetQuote}
             data-testid={`button-quote-${title.toLowerCase().replace(/\s+/g, '-')}`}
           >
-            Get Quote
+          Instant Quote
           </Button>
         </div>
       </CardContent>
