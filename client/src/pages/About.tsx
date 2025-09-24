@@ -134,8 +134,8 @@ export default function About() {
         </div>
       </section>
 
-     <div className="bg-background py-12">
-      <h2 className="text-3xl font-bold text-center mb-10">Our Story</h2>
+     <div className=" bg-card py-12">
+      <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6 text-center">Our Story</h2>
 
       <VerticalTimeline>
         {timelineData.map((item, index) => (
