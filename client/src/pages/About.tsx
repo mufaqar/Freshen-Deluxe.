@@ -162,15 +162,15 @@ export default function About() {
           {timelineData.map((item, index) => (
             <VerticalTimelineElement
               key={index}
-              contentStyle={{ background: "#d6b771", color: "#fff" }}
-              contentArrowStyle={{ borderRight: "7px solid  #d6b771" }}
+              contentStyle={{ background: "transparent", color: "#d6b771", boxShadow: "none" }}
+              contentArrowStyle={{ borderRight: "0px solid  #d6b771" }}
               iconStyle={{ background: "#d6b771", color: "#fff" }}
               icon={item.icon}
             >
               <h3 className="vertical-timeline-element-title text-2xl font-bold">
                 {item.title}
               </h3>
-              <p className="text-[#ffffffe6]">{item.description}</p>
+              <p className="text-[#d6b771]">{item.description}</p>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>
