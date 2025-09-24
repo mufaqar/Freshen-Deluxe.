@@ -124,7 +124,7 @@ export default function HeroSection({ onBookNow, onWhatsApp }: HeroSectionProps)
           <ScrollAnimatedPhrase />
           
           {/* Company Name Below */}
-          <div className="mt-8">
+          <div className="mt-3">
             <CompanyNameReveal />
           </div>
           

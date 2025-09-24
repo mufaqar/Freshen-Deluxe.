@@ -44,7 +44,7 @@ export default function CompanyNameReveal() {
                 : 'opacity-0 translate-y-12 scale-98'
             }`}
           >
-            <h2 className="text-4xl md:text-6xl lg:text-7xl  text-ring tracking-wider leading-none">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl  text-ring  leading-none">
               <span 
                 className={`inline-block transition-all duration-1000 ease-out delay-200 ${
                   isVisible 

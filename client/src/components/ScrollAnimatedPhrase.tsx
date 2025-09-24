@@ -44,7 +44,7 @@ export default function ScrollAnimatedPhrase() {
                 : 'opacity-0 translate-y-8 scale-95'
             }`}
           >
-             <h2 className="text-4xl md:text-6xl lg:text-7xl  text-ring tracking-wider leading-none">
+             <h2 className="text-4xl md:text-6xl lg:text-5xl  text-ring tracking-wider leading-none">
                <span 
                  className={`inline-block transition-all duration-1000 ease-out delay-100 ${
                    isVisible 
@@ -60,7 +60,7 @@ export default function ScrollAnimatedPhrase() {
       </div>
       
       <div 
-        className={`absolute inset-0 bg-gradient-to-r from-transparent via-ring/5 to-transparent transition-opacity duration-1000 ${
+        className={`absolute inset-0  transition-opacity duration-1000 ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
       />
