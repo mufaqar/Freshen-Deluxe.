@@ -132,7 +132,7 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
 
         <Card className="hover-elevate">
           <CardHeader>
-            <CardTitle className="text-2xl font-serif text-primary">Quote Request Form</CardTitle>
+            <CardTitle className="text-2xltext-primary">Quote Request Form</CardTitle>
             <CardDescription>
               Please provide your details and service requirements. We'll get back to you within 24 hours.
             </CardDescription>

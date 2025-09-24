@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Clock, Shield, Award, Sparkles } from "lucide-react";
 import { useSEO } from "@/hooks/use-seo";
 import { Link } from "wouter";
+import SectionHeading from "@/components/SectionHeading";
 
 export default function Contact() {
   useSEO({
@@ -57,13 +58,10 @@ export default function Contact() {
       {/* Header */}
       <section className="py-20 bg-gradient-to-br from-primary/5 to-ring/5">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <Badge className="mb-6 bg-ring/10 text-ring" data-testid="badge-contact">
-            Contact Us
-          </Badge>
-          <h1 className="text-4xl md:text-5xl  text-primary mb-6">
-            Ready to{" "}
-            <span className="text-ring">Get Started?</span>
-          </h1>
+         
+
+        <SectionHeading subtitle="Contact Us" title=" Ready to Get Started?"/>
+
           <p className="text-xl text-muted-foreground">
             Contact Dubai's most luxurious cleaning service. We're here to answer 
             your questions and provide personalized quotes.
@@ -114,12 +112,8 @@ export default function Contact() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-ring/10 text-ring" data-testid="badge-guarantees">
-              Our Commitment
-            </Badge>
-            <h2 className="text-4xl  text-primary mb-6">
-              Service Guarantees
-            </h2>
+            
+               <SectionHeading subtitle="    Our Commitment" title="       Service Guarantees"/>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               When you choose Freshen Deluxe, you're choosing premium service 
               backed by our comprehensive guarantees.
@@ -133,7 +127,7 @@ export default function Contact() {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-ring/10 rounded-full mb-6">
                     <guarantee.icon className="h-8 w-8 text-ring" />
                   </div>
-                  <h3 className="text-lg font-semibold text-primary mb-3">{guarantee.title}</h3>
+                  <h3 className="text-lg  text-primary mb-3">{guarantee.title}</h3>
                   <p className="text-sm text-muted-foreground">{guarantee.description}</p>
                 </CardContent>
               </Card>
@@ -157,7 +151,7 @@ export default function Contact() {
           <div className="space-y-6">
             <Card className="hover-elevate">
               <CardContent className="p-6">
-                <h3 className="font-semibold text-primary mb-2" data-testid="faq-coverage">
+                <h3 className=" text-primary mb-2" data-testid="faq-coverage">
                   Do you provide services across all of Dubai?
                 </h3>
                 <p className="text-muted-foreground">
@@ -170,7 +164,7 @@ export default function Contact() {
 
             <Card className="hover-elevate">
               <CardContent className="p-6">
-                <h3 className="font-semibold text-primary mb-2" data-testid="faq-supplies">
+                <h3 className=" text-primary mb-2" data-testid="faq-supplies">
                   Do you provide all cleaning supplies and equipment?
                 </h3>
                 <p className="text-muted-foreground">
@@ -183,7 +177,7 @@ export default function Contact() {
 
             <Card className="hover-elevate">
               <CardContent className="p-6">
-                <h3 className="font-semibold text-primary mb-2" data-testid="faq-booking">
+                <h3 className=" text-primary mb-2" data-testid="faq-booking">
                   How far in advance should I book?
                 </h3>
                 <p className="text-muted-foreground">
@@ -196,7 +190,7 @@ export default function Contact() {
 
             <Card className="hover-elevate">
               <CardContent className="p-6">
-                <h3 className="font-semibold text-primary mb-2" data-testid="faq-pricing">
+                <h3 className=" text-primary mb-2" data-testid="faq-pricing">
                   How is pricing determined?
                 </h3>
                 <p className="text-muted-foreground">

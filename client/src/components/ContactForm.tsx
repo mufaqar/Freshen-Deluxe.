@@ -80,7 +80,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
       {/* Contact Info */}
       <div className="space-y-6">
         <div>
-          <h3 className="text-2xl font-serif font-semibold text-primary mb-4">
+          <h3 className="text-2xlfont-semibold text-primary mb-4">
             Get in Touch
           </h3>
           <p className="text-muted-foreground mb-6">
@@ -137,7 +137,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
       {/* Contact Form */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-xl font-serif text-primary">Send us a Message</CardTitle>
+          <CardTitle className="text-xltext-primary">Send us a Message</CardTitle>
           <CardDescription>
             Fill out the form below and we'll get back to you within 24 hours
           </CardDescription>

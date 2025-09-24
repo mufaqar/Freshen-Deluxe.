@@ -45,7 +45,7 @@ export default function ServiceCard({
       </div>
 
       <CardHeader className="pb-1 pt-3 px-4 flex-shrink-0">
-        <CardTitle className="text-lg font-serif text-primary leading-tight">{title}</CardTitle>
+        <CardTitle className="text-lgtext-primary leading-tight">{title}</CardTitle>
         <CardDescription className="text-muted-foreground leading-relaxed text-sm">{description}</CardDescription>
       </CardHeader>
 

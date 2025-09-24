@@ -56,7 +56,7 @@ export default function Calculator({ onWhatsAppQuote }: CalculatorProps) {
             <CalcIcon className="h-8 w-8 text-ring" />
           </div>
         </div>
-        <CardTitle className="text-2xl font-serif text-primary">Service Calculator</CardTitle>
+        <CardTitle className="text-2xltext-primary">Service Calculator</CardTitle>
         <CardDescription>
           Get an instant estimate for your cleaning service requirements
         </CardDescription>
