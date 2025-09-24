@@ -167,10 +167,10 @@ export default function About() {
               iconStyle={{ background: "#d6b771", color: "#fff" }}
               icon={item.icon}
             >
-              <h3 className=" text-2xl ">
+              <h3 className=" text-2xl  ">
                 {item.title}
               </h3>
-              <p className="text-[#d6b771]">{item.description}</p>
+              <p className=" text-primary">{item.description}</p>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>
