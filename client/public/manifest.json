@@ -1,0 +1,27 @@
+{
+  "name": "Freshen Deluxe - Dubai's Most Luxurious Cleaning Services",
+  "short_name": "Freshen Deluxe",
+  "description": "Experience luxury hospitality-level cleaning with premium touches and unmatched attention to detail.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#d4af37",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "lifestyle", "utilities"],
+  "lang": "en",
+  "dir": "ltr"
+}

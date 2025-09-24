@@ -16,8 +16,7 @@ export default function Navigation({ className = "" }: NavigationProps) {
     { path: "/", label: "Home" },
     { path: "/about", label: "About" },
     { path: "/services", label: "Services" },
-    { path: "/calculator", label: "Price Calculator" },
-    { path: "/contact", label: "Contact" }
+    { path: "/instant-quote", label: "Instant Quote" }
   ];
 
   const isActive = (path: string) => {
@@ -29,24 +28,13 @@ export default function Navigation({ className = "" }: NavigationProps) {
   return (
     <nav className={`sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/">
-            <div className="flex items-center cursor-pointer" data-testid="link-logo">
-              <img 
-                src={logo} 
-                alt="Freshen Deluxe - Boutique Cleaning Services" 
-                className="h-40 w-auto"
-              />
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+        <div className="flex items-center h-16">
+          {/* Left Navigation */}
+          <div className="hidden lg:flex items-center space-x-8 flex-1">
             {navItems.map((item) => (
               <Link key={item.path} href={item.path}>
                 <span 
-                  className={`text-sm font-medium transition-colors cursor-pointer ${
+                  className={`text-sm font-medium transition-all duration-300 cursor-pointer hover:scale-105 ${
                     isActive(item.path) 
                       ? "text-ring" 
                       : "text-foreground hover:text-ring"
@@ -57,17 +45,35 @@ export default function Navigation({ className = "" }: NavigationProps) {
                 </span>
               </Link>
             ))}
-            <Button 
-              className="bg-ring hover:bg-ring/90 text-primary-foreground"
-              data-testid="button-book-now"
-              onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to book a cleaning service.')}`, '_blank', 'noopener,noreferrer')}
-            >
-              Book Now
-            </Button>
+          </div>
+
+          {/* Center Logo */}
+          <div className="absolute left-1/2 transform -translate-x-1/2">
+            <Link href="/">
+              <div className="flex items-center cursor-pointer transition-transform duration-300 hover:scale-105" data-testid="link-logo">
+                <img 
+                  src={logo} 
+                  alt="Freshen Deluxe - Boutique Cleaning Services" 
+                  className="h-40 w-auto"
+                />
+              </div>
+            </Link>
+          </div>
+
+          {/* Right Contact Button */}
+          <div className="hidden lg:flex items-center justify-end flex-1">
+            <Link href="/contact">
+              <Button 
+                className="bg-ring hover:bg-ring/90 text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                data-testid="button-contact-us"
+              >
+                Contact Us
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Button
               variant="ghost"
               size="icon"
@@ -85,7 +91,7 @@ export default function Navigation({ className = "" }: NavigationProps) {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden animate-in slide-in-from-top-2 duration-300">
             <div className="px-2 pt-2 pb-3 space-y-1 border-t border-border">
               {navItems.map((item) => (
                 <Link key={item.path} href={item.path}>
@@ -103,16 +109,15 @@ export default function Navigation({ className = "" }: NavigationProps) {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button 
-                  className="w-full bg-ring hover:bg-ring/90 text-primary-foreground"
-                  data-testid="button-mobile-book-now"
-                  onClick={() => {
-                    window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to book a cleaning service.')}`, '_blank', 'noopener,noreferrer');
-                    setIsMobileMenuOpen(false);
-                  }}
-                >
-                  Book Now
-                </Button>
+                <Link href="/contact">
+                  <Button 
+                    className="w-full bg-ring hover:bg-ring/90 text-primary-foreground"
+                    data-testid="button-mobile-contact-us"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Contact Us
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

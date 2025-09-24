@@ -2,13 +2,18 @@ import ServiceCard from "@/components/ServiceCard";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Building2, Home as HomeIcon, Bed, Clock, Shield, Sparkles } from "lucide-react";
+import { Building2, Home as HomeIcon, Bed, Clock, Shield, Sparkles, ChevronDown } from "lucide-react";
 import { useSEO } from "@/hooks/use-seo";
+import { useState } from "react";
+import { Link } from "wouter";
 import heroImage from "@assets/pexels-cottonbro-6466492_1757788137475.jpg";
 import officeImage from "@assets/pexels-cottonbro-6466226_1757788137471.jpg";
 import airbnbImage from "@assets/pexels-cottonbro-6466302_1757788137478.jpg";
 
 export default function Services() {
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
   useSEO({
     title: 'Premium Cleaning Services Dubai - Freshen Deluxe',
     description: 'Discover our curated cleaning services: The Regular Refresh, The Complete Clean, Holiday Home & Airbnb Services, and Commercial & Office Spaces. H10 standards, luxury touches.',
@@ -35,7 +40,12 @@ export default function Services() {
       title: "Deep Cleaning",
       description: "Every corner counts. Whether it's after a renovation, a move, end-of-lease, or just because your home deserves it, we refresh your property with precision and care, leaving it spotless and revitalized.",
       features: [
-        "Everything in Residential Cleaning",
+        "Dusting and wiping all surfaces, furniture, and floors",
+        "Vacuuming and mopping floors",
+        "Bathroom cleaning and sanitization",
+        "Kitchen: counters, appliances, sink, and exterior cabinets",
+        "Light organization and bed linen change",
+        "Emptying bins and waste management",
         "Deep cleaning of overlooked areas: baseboards, window frames, ceilings, and light fixtures",
         "Interior appliance cleaning (oven, microwave, fridge)",
         "Carpet and upholstery steam cleaning",
@@ -50,12 +60,11 @@ export default function Services() {
       title: "Holiday Homes Cleaning",
       description: "First impressions matter. We prepare your holiday rental to perfection, ensuring every guest walks into a space that feels welcoming, polished, and unforgettable.",
       features: [
-        "Pre-check visit: team member inspects property before guest arrival",
-        "Light ambient scent: subtle fragrance throughout from premium brand",
-        "Welcome gift: luxury chocolates as thoughtful touch",
-        "Property photos: before and after cleaning for documentation",
-        "Linen service (extra cost): hotel-quality sheets and towels",
-        "Priority turnaround scheduling for guest arrivals"
+        "Complete property cleaning and sanitization",
+        "Kitchen and bathroom deep cleaning",
+        "Living areas and bedroom preparation",
+        "Priority turnaround scheduling for guest arrivals",
+        "Quality inspection and final touches"
       ],
       image: airbnbImage,
       icon: Bed,
@@ -101,41 +110,171 @@ export default function Services() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-primary/5 to-ring/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={officeImage} 
+            alt="Luxury cleaning service"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Badge className="mb-6 bg-ring/10 text-ring" data-testid="badge-services-hero">
             Our Services
           </Badge>
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-primary mb-6 leading-tight">
-            Curating Spaces That{" "}
-            <span className="text-ring">Embody Elegance</span>
+          <h1 className="text-4xl md:text-6xl font-serif font-bold text-ring mb-6 leading-tight text-center">
+            Premium Cleaning Services
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            We don't aim to be the biggest cleaning company in Dubai. We aim to be the most trusted. 
-            Each service is crafted with H10 standards - the protocols used in the world's leading five-star hotels.
+          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+            We aim to be the best cleaning company in Dubai. Each service is crafted with H10 standards - 
+            the protocols used in the world's leading five-star hotels, ensuring exceptional quality and trust.
           </p>
           <Button 
             size="lg"
-            className="bg-primary hover:bg-primary/90"
+            className="bg-ring hover:bg-ring/90 text-primary-foreground font-semibold px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
             data-testid="button-services-quote"
             onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for cleaning services.')}`, '_blank', 'noopener,noreferrer')}
           >
-            Get Free Quote
+            Get Quote
           </Button>
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Services Accordion */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-            {services.map((service, index) => (
-              <ServiceCard
+          <div className="flex flex-wrap gap-4 justify-center">
+            {services.map((service, index) => {
+              const isExpanded = expandedCard === index;
+              const Icon = service.icon;
+              
+              return (
+                <Card 
                 key={index}
-                {...service}
-                onGetQuote={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for ' + service.title + ' service.')}`, '_blank', 'noopener,noreferrer')}
-              />
-            ))}
+                  className={`w-64 transition-all duration-300 cursor-pointer overflow-hidden ${
+                    isExpanded ? 'w-96 shadow-lg' : 'hover:shadow-md'
+                  }`}
+                  onClick={() => setExpandedCard(isExpanded ? null : index)}
+                >
+                  {/* Service Image */}
+                  <div 
+                    className="relative h-32 overflow-hidden cursor-pointer"
+                    onMouseEnter={() => setHoveredCard(index)}
+                    onMouseLeave={() => setHoveredCard(null)}
+                  >
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    
+                    {/* View More Overlay */}
+                    <div className={`absolute inset-0 bg-black/80 flex items-center justify-center transition-all duration-300 z-20 ${
+                      hoveredCard === index ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                    }`}>
+                      <div className="text-center text-white">
+                        <div className="text-lg font-bold mb-1">View More</div>
+                        <div className="text-xs opacity-90">Click to expand</div>
+                      </div>
+                    </div>
+                    
+                    <div className="absolute top-3 left-3">
+                      <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                        <Icon className="h-4 w-4 text-white" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <CardTitle className="text-lg font-semibold text-primary">
+                          {service.title}
+                        </CardTitle>
+                      </div>
+                      <ChevronDown 
+                        className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ${
+                          isExpanded ? 'rotate-180' : ''
+                        }`} 
+                      />
+                    </div>
+                  </CardHeader>
+                  
+                  <CardContent className="pt-0">
+                    <CardDescription className="text-sm text-muted-foreground mb-4">
+                      {service.description}
+                    </CardDescription>
+                    
+                    {isExpanded && (
+                      <div className="space-y-4 animate-in slide-in-from-top-2 duration-300">
+                        <div>
+                          <h4 className="text-sm font-semibold text-primary mb-2">What's Included:</h4>
+                          <ul className="space-y-1">
+                            {service.features.map((feature, featureIndex) => (
+                              <li key={featureIndex} className="text-xs text-muted-foreground flex items-start">
+                                <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                                {feature}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                               {service.specialTouches && (
+                                 <div className="bg-ring/5 p-4 rounded-lg">
+                                   <h4 className="text-sm font-semibold text-ring mb-3">Luxury Touches:</h4>
+                                   <ul className="space-y-2">
+                                     <li className="text-xs text-muted-foreground flex items-start">
+                                       <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                       <div>
+                                         <strong>Pre-check visit:</strong> A team member inspects the property before guest arrival to ensure everything is perfect
+                                       </div>
+                                     </li>
+                                     <li className="text-xs text-muted-foreground flex items-start">
+                                       <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                       <div>
+                                         <strong>Light ambient scent:</strong> A subtle fragrance throughout the apartment from a premium brand
+                                       </div>
+                                     </li>
+                                     <li className="text-xs text-muted-foreground flex items-start">
+                                       <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                       <div>
+                                         <strong>Welcome gift:</strong> Luxury chocolates as a thoughtful touch
+                                       </div>
+                                     </li>
+                                     <li className="text-xs text-muted-foreground flex items-start">
+                                       <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                       <div>
+                                         <strong>Property photos:</strong> Before and after cleaning for documentation and peace of mind
+                                       </div>
+                                     </li>
+                                     <li className="text-xs text-muted-foreground flex items-start">
+                                       <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                       <div>
+                                         <strong>Linen service (extra cost):</strong> Hotel-quality sheets and towels ready for guests
+                                       </div>
+                                     </li>
+                                   </ul>
+                                 </div>
+                               )}
+                        
+                        <Button 
+                          size="sm" 
+                          className="w-full bg-ring hover:bg-ring/90 text-primary-foreground"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for ' + service.title + ' service.')}`, '_blank', 'noopener,noreferrer');
+                          }}
+                        >
+                          Get Quote
+                        </Button>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -147,7 +286,7 @@ export default function Services() {
             <Badge className="mb-4 bg-ring/10 text-ring" data-testid="badge-features">
               Why Choose Us
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-ring mb-6 text-center">
               Service Excellence
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -170,112 +309,15 @@ export default function Services() {
             ))}
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            <Card className="hover-elevate">
-              <CardHeader>
-                <CardTitle className="text-2xl font-serif text-primary">Commercial Services</CardTitle>
-                <CardDescription>
-                  Tailored solutions for offices, retail spaces, and commercial buildings
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-3">
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-ring rounded-full mr-3"></div>
-                    <span className="text-muted-foreground">Customized cleaning schedules</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-ring rounded-full mr-3"></div>
-                    <span className="text-muted-foreground">Professional appearance standards</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-ring rounded-full mr-3"></div>
-                    <span className="text-muted-foreground">Quality assurance protocols</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-ring rounded-full mr-3"></div>
-                    <span className="text-muted-foreground">Flexible service arrangements</span>
-                  </div>
-                </div>
-                <Button 
-                  className="w-full mt-6"
-                  data-testid="button-commercial-quote"
-                  onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for Commercial & Office Spaces cleaning service.')}`, '_blank', 'noopener,noreferrer')}
-                >
-                  Request Commercial Quote
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="hover-elevate">
-              <CardHeader>
-                <CardTitle className="text-2xl font-serif text-primary">Residential & Airbnb</CardTitle>
-                <CardDescription>
-                  Luxury cleaning for private homes and short-rental properties
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-3">
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-ring rounded-full mr-3"></div>
-                    <span className="text-muted-foreground">Room-based service structure</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-ring rounded-full mr-3"></div>
-                    <span className="text-muted-foreground">Volume service packages available</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-ring rounded-full mr-3"></div>
-                    <span className="text-muted-foreground">Luxury amenity placement</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-ring rounded-full mr-3"></div>
-                    <span className="text-muted-foreground">Fast Airbnb turnarounds</span>
-                  </div>
-                </div>
-                <Button 
-                  className="w-full mt-6"
-                  data-testid="button-residential-quote"
-                  onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for residential cleaning services.')}`, '_blank', 'noopener,noreferrer')}
-                >
-                  Get Residential Quote
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
+         
         </div>
       </section>
 
-      {/* Service Areas */}
-      <section className="py-20 bg-background">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <Badge className="mb-4 bg-ring/10 text-ring" data-testid="badge-coverage">
-            Service Coverage
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
-            Serving All of Dubai
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Our professional cleaning teams provide services across all areas of Dubai, 
-            ensuring consistent luxury standards wherever you are located.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              "Business Bay", "Downtown Dubai", "Dubai Marina", "JBR", "Palm Jumeirah", 
-              "Jumeirah", "DIFC", "Dubai Hills", "Arabian Ranches", "JVC"
-            ].map((area, index) => (
-              <Badge key={index} variant="secondary" className="text-sm" data-testid={`area-${index}`}>
-                {area}
-              </Badge>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ring mb-6 text-center">
             Ready to Experience Luxury Cleaning?
           </h2>
           <p className="text-xl opacity-90 mb-8">
@@ -283,18 +325,19 @@ export default function Services() {
             Experience the difference boutique service makes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/instant-quote">
+              <Button 
+                size="sm"
+                variant="outline"
+                className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 sm:size-default lg:size-lg"
+                data-testid="button-services-calculator"
+              >
+                Request Quote
+              </Button>
+            </Link>
             <Button 
-              size="lg"
-              variant="outline"
-              className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10"
-              data-testid="button-services-calculator"
-              onClick={() => window.location.href = '/calculator'}
-            >
-              Request Quote
-            </Button>
-            <Button 
-              size="lg" 
-              className="bg-ring hover:bg-ring/90 text-primary-foreground"
+              size="sm" 
+              className="bg-ring hover:bg-ring/90 text-primary-foreground sm:size-default lg:size-lg"
               data-testid="button-services-whatsapp"
               onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for cleaning services.')}`, '_blank', 'noopener,noreferrer')}
             >

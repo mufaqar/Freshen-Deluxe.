@@ -7,13 +7,18 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { useSEO } from "@/hooks/use-seo";
+import { sendFormEmail, type QuoteFormData } from "@/lib/emailService";
+import { useToast } from "@/hooks/use-toast";
 
 interface QuoteFormProps {
   serviceType?: string;
 }
 
 export default function QuoteForm({ serviceType }: QuoteFormProps) {
-  const [formData, setFormData] = useState({
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+  
+  const [formData, setFormData] = useState<QuoteFormData>({
     // Personal Information
     firstName: "",
     lastName: "",
@@ -53,52 +58,64 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // Create WhatsApp message
-    let message = `Hello! I would like to get a quote for ${formData.service}.\n\n`;
-    message += `Personal Information:\n`;
-    message += `Name: ${formData.firstName} ${formData.lastName}\n`;
-    message += `Address: ${formData.address}\n`;
-    message += `Email: ${formData.email}\n`;
-    message += `Phone: ${formData.phone}\n\n`;
-    
-    if (formData.service === "Residential Cleaning") {
-      message += `Residential Cleaning Details:\n`;
-      message += `Bedrooms: ${formData.bedrooms}\n`;
-      message += `Bathrooms: ${formData.bathrooms}\n`;
-      message += `Kitchen: ${formData.kitchen}\n`;
-      message += `Living Rooms: ${formData.livingRooms}\n`;
-      message += `Frequency: ${formData.frequency}\n`;
-      message += `Hours Requested: ${formData.hours}\n`;
-      if (formData.additionalInfo) message += `Additional Info: ${formData.additionalInfo}\n`;
-    } else if (formData.service === "Deep Cleaning") {
-      message += `Deep Cleaning Details:\n`;
-      message += `Bedrooms: ${formData.bedrooms}\n`;
-      message += `Bathrooms: ${formData.bathrooms}\n`;
-      message += `Kitchen: ${formData.kitchen}\n`;
-      message += `Living Rooms: ${formData.livingRooms}\n`;
-      message += `Preferred Date: ${formData.date}\n`;
-      if (formData.additionalInfo) message += `Additional Info: ${formData.additionalInfo}\n`;
-    } else if (formData.service === "Holiday Homes Cleaning") {
-      message += `Airbnb/Holiday Home Details:\n`;
-      message += `Number of Properties: ${formData.numberOfProperties}\n`;
-      message += `Property Configurations: ${formData.propertyConfigurations}\n`;
-      message += `Locations: ${formData.locations}\n`;
-      if (formData.additionalInfo) message += `Additional Info: ${formData.additionalInfo}\n`;
-    } else if (formData.service === "Commercial Cleaning") {
-      message += `Commercial Cleaning Details:\n`;
-      message += `Number of Cleaners Needed: ${formData.numberOfCleaners}\n`;
-      message += `Number of Hours: ${formData.numberOfHours}\n`;
-      message += `Building Location: ${formData.buildingLocation}\n`;
-      message += `Frequency: ${formData.commercialFrequency}\n`;
-      message += `Preferred Time Slots: ${formData.timeSlots}\n`;
-      if (formData.additionalInfo) message += `Additional Info: ${formData.additionalInfo}\n`;
+    try {
+      const result = await sendFormEmail(formData, 'quote');
+      
+      if (result.success) {
+        toast({
+          title: "Quote Request Sent!",
+          description: "Thank you! We've received your quote request and will get back to you within 24 hours.",
+          duration: 5000,
+        });
+        
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          address: "",
+          email: "",
+          phone: "",
+          service: serviceType || "",
+          bedrooms: "",
+          bathrooms: "",
+          kitchen: "",
+          livingRooms: "",
+          frequency: "",
+          hours: "",
+          date: "",
+          numberOfProperties: "",
+          propertyConfigurations: "",
+          locations: "",
+          numberOfCleaners: "",
+          numberOfHours: "",
+          buildingLocation: "",
+          commercialFrequency: "",
+          timeSlots: "",
+          additionalInfo: ""
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: result.message || "Failed to send quote request. Please try again.",
+          variant: "destructive",
+          duration: 5000,
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again or contact us directly.",
+        variant: "destructive",
+        duration: 5000,
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-    
-    const whatsappUrl = `https://wa.me/971554360800?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -110,7 +127,7 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
             Request Your Personalized Quote
           </h1>
           <p className="text-xl text-muted-foreground">
-            Fill out the form below and we'll send you a detailed quote via WhatsApp
+            Fill out the form below and we'll send you a detailed quote
           </p>
         </div>
 
@@ -426,8 +443,13 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
               </div>
 
               <div className="pt-6">
-                <Button type="submit" className="w-full bg-primary hover:bg-primary/90" size="lg">
-                  Send Quote Request via WhatsApp
+                <Button 
+                  type="submit" 
+                  className="w-full bg-ring hover:bg-ring/90 text-primary-foreground sm:size-default lg:size-lg" 
+                  size="sm"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending Quote Request..." : "Send Quote Request"}
                 </Button>
                 <p className="text-sm text-muted-foreground text-center mt-4">
                   We'll respond within 24 hours with your personalized quote

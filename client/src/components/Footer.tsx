@@ -14,8 +14,8 @@ export default function Footer({ className = "" }: FooterProps) {
         {/* Logo Section - Full Width */}
         <div className="flex justify-start mb-8">
           <Link href="/">
-            <div className="cursor-pointer" data-testid="link-footer-logo">
-              <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-white/20 shadow-lg">
+            <div className="cursor-pointer transition-transform duration-300 hover:scale-105" data-testid="link-footer-logo">
+              <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-white/20 shadow-lg hover-lift">
                 <img 
                   src={logo} 
                   alt="Freshen Deluxe - Boutique Cleaning Services" 
@@ -87,9 +87,9 @@ export default function Footer({ className = "" }: FooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href="/calculator">
+                <Link href="/instant-quote">
                   <span className="hover:text-ring transition-colors cursor-pointer" data-testid="link-calculator">
-                    Price Calculator
+                    Instant Quote
                   </span>
                 </Link>
               </li>
@@ -141,12 +141,12 @@ export default function Footer({ className = "" }: FooterProps) {
               © 2024 Freshen Deluxe. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0 text-sm">
-              <span className="text-primary-foreground/60 hover:text-ring cursor-pointer transition-colors" data-testid="link-privacy">
+              <a href="/privacy" className="text-primary-foreground/60 hover:text-ring transition-colors" data-testid="link-privacy">
                 Privacy Policy
-              </span>
-              <span className="text-primary-foreground/60 hover:text-ring cursor-pointer transition-colors" data-testid="link-terms">
+              </a>
+              <a href="/terms" className="text-primary-foreground/60 hover:text-ring transition-colors" data-testid="link-terms">
                 Terms of Service
-              </span>
+              </a>
             </div>
           </div>
         </div>

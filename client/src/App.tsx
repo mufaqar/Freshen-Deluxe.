@@ -4,7 +4,7 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import AnnouncementBar from "@/components/AnnouncementBar";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageLoader from "@/components/PageLoader";
@@ -18,6 +18,9 @@ import NotFound from "@/pages/not-found";
 function Router() {
   const [location] = useLocation();
   const [isLoading, setIsLoading] = useState(false);
+  
+  // Scroll to top on route change
+  useScrollToTop();
 
   useEffect(() => {
     setIsLoading(true);
@@ -37,7 +40,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/services" component={Services} />
-      <Route path="/calculator" component={CalculatorPage} />
+      <Route path="/instant-quote" component={CalculatorPage} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
@@ -49,11 +52,6 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <div className="min-h-screen flex flex-col">
-          <AnnouncementBar 
-            message="Limited Time: Get 20% off your first deep cleaning service this month"
-            actionText="Book Now"
-            onAction={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to book a cleaning service with the 20% discount.')}`, '_blank', 'noopener,noreferrer')}
-          />
           <Navigation />
           <main className="flex-1">
             <Router />

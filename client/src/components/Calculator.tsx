@@ -148,7 +148,7 @@ export default function Calculator({ onWhatsAppQuote }: CalculatorProps) {
         <Button 
           onClick={handleCalculateRequest}
           disabled={!isFormValid()}
-          className="w-full bg-primary hover:bg-primary/90"
+          className="w-full bg-ring hover:bg-ring/90 text-primary-foreground"
           data-testid="button-calculate"
         >
           Request Quote

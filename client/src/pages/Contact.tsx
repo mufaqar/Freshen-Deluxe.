@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Clock, Shield, Award, Sparkles } from "lucide-react";
 import { useSEO } from "@/hooks/use-seo";
+import { Link } from "wouter";
 
 export default function Contact() {
   useSEO({
@@ -201,7 +202,7 @@ export default function Contact() {
                 <p className="text-muted-foreground">
                   Pricing varies by service type: commercial spaces by square meters or hourly rates, 
                   residential and Airbnb by number of rooms. Volume discounts apply for regular 
-                  bookings. Use our price calculator for instant estimates.
+                  bookings. Use our instant quote tool for instant estimates.
                 </p>
               </CardContent>
             </Card>
@@ -220,18 +221,19 @@ export default function Contact() {
             Contact us now for your personalized quote.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/instant-quote">
+              <Button 
+                size="sm"
+                variant="outline"
+                className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 sm:size-default lg:size-lg"
+                data-testid="button-contact-calculator"
+              >
+                Get Instant Quote
+              </Button>
+            </Link>
             <Button 
-              size="lg"
-              variant="outline"
-              className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10"
-              data-testid="button-contact-calculator"
-              onClick={() => window.location.href = '/calculator'}
-            >
-              Use Price Calculator
-            </Button>
-            <Button 
-              size="lg" 
-              className="bg-ring hover:bg-ring/90 text-primary-foreground"
+              size="sm" 
+              className="bg-ring hover:bg-ring/90 text-primary-foreground sm:size-default lg:size-lg"
               data-testid="button-contact-whatsapp"
               onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for cleaning services.')}`, '_blank', 'noopener,noreferrer')}
             >

@@ -10,13 +10,13 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Mail, Phone, MessageSquare, Send } from "lucide-react";
+import { sendFormEmail, type ContactFormData } from "@/lib/emailService";
+import { useToast } from "@/hooks/use-toast";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   phone: z.string().min(10, "Please enter a valid phone number"),
-  serviceType: z.string().min(1, "Please select a service type"),
-  propertyType: z.string().optional(),
   message: z.string().min(10, "Please provide more details about your requirements"),
 });
 
@@ -28,6 +28,7 @@ interface ContactFormProps {
 
 export default function ContactForm({ onSubmit }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -35,8 +36,6 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
       name: "",
       email: "",
       phone: "",
-      serviceType: "",
-      propertyType: "",
       message: "",
     },
   });
@@ -44,17 +43,36 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
   const handleSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    if (onSubmit) {
-      onSubmit(data);
-    } else {
-      console.log('Form submitted:', data);
+    try {
+      const result = await sendFormEmail(data, 'contact');
+      
+      if (result.success) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you! We've received your message and will get back to you within 24 hours.",
+          duration: 5000,
+        });
+        
+        form.reset();
+      } else {
+        toast({
+          title: "Error",
+          description: result.message || "Failed to send message. Please try again.",
+          variant: "destructive",
+          duration: 5000,
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again or contact us directly.",
+        variant: "destructive",
+        duration: 5000,
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-    
-    setIsSubmitting(false);
-    form.reset();
   };
 
   return (
@@ -105,8 +123,8 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
 
         <div className="pt-6 border-t border-border">
           <Button 
-            size="lg"
-            className="bg-ring hover:bg-ring/90 text-primary-foreground"
+            size="sm"
+            className="bg-ring hover:bg-ring/90 text-primary-foreground sm:size-default lg:size-lg"
             data-testid="button-whatsapp-contact"
             onClick={() => console.log('WhatsApp contact clicked')}
           >
@@ -172,57 +190,6 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
                 />
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
-                <FormField
-                  control={form.control}
-                  name="serviceType"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Service Type</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger data-testid="select-service-type-form">
-                            <SelectValue placeholder="Select service" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="commercial">Commercial</SelectItem>
-                          <SelectItem value="residential">Residential</SelectItem>
-                          <SelectItem value="airbnb">Airbnb</SelectItem>
-                          <SelectItem value="consultation">Consultation</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="propertyType"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Property Type</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger data-testid="select-property-type-form">
-                            <SelectValue placeholder="Property type" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="office">Office</SelectItem>
-                          <SelectItem value="retail">Retail Store</SelectItem>
-                          <SelectItem value="apartment">Apartment</SelectItem>
-                          <SelectItem value="villa">Villa</SelectItem>
-                          <SelectItem value="studio">Studio</SelectItem>
-                          <SelectItem value="penthouse">Penthouse</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
 
               <FormField
                 control={form.control}
@@ -246,7 +213,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full bg-primary hover:bg-primary/90"
+                className="w-full bg-ring hover:bg-ring/90 text-primary-foreground"
                 data-testid="button-submit-contact"
               >
                 {isSubmitting ? (
