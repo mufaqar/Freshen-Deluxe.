@@ -24,6 +24,7 @@ import heroImage from "@assets/pexels-cottonbro-6466492_1757788137475.jpg";
 import officeImage from "@assets/pexels-cottonbro-6466226_1757788137471.jpg";
 import airbnbImage from "@assets/pexels-cottonbro-6466302_1757788137478.jpg";
 import SectionHeading from "@/components/SectionHeading";
+import CTA from "@/components/Cta";
 
 export default function Services() {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -373,46 +374,9 @@ export default function Services() {
         </div>
       </section>
 
+     
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl  text-ring mb-6 text-center">
-            Ready to Experience Luxury Cleaning?
-          </h2>
-          <p className="text-xl opacity-90 mb-8">
-            Contact us today for a personalized quote tailored to your specific
-            needs. Experience the difference boutique service makes.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/instant-quote">
-              <Button
-                size="sm"
-                variant="outline"
-                className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 sm:size-default lg:size-lg"
-                data-testid="button-services-calculator"
-              >
-                Request Quote
-              </Button>
-            </Link>
-            <Button
-              size="sm"
-              className="bg-ring hover:bg-ring/90 text-primary-foreground sm:size-default lg:size-lg"
-              data-testid="button-services-whatsapp"
-              onClick={() =>
-                window.open(
-                  `https://wa.me/971554360800?text=${encodeURIComponent(
-                    "Hello! I would like to get a quote for cleaning services."
-                  )}`,
-                  "_blank",
-                  "noopener,noreferrer"
-                )
-              }
-            >
-              WhatsApp +971 55 436 0800
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTA />
     </div>
   );
 }

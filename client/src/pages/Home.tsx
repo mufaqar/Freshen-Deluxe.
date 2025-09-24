@@ -14,6 +14,7 @@ import officeImage from "@assets/pexels-cottonbro-6466226_1757788137471.jpg";
 import airbnbImage from "@assets/pexels-cottonbro-6466302_1757788137478.jpg";
 import teamImage from "@assets/pexels-cottonbro-6466216_1757788137470.jpg";
 import bedMakingImage from "@assets/pexels-cottonbro-6466479_1757788137472.jpg";
+import CTA from "@/components/Cta";
 
 export default function Home() {
   useSEO({
@@ -81,37 +82,7 @@ export default function Home() {
      
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl  mb-6">
-            Ready to Experience Dubai's Most Luxurious Cleaning?
-          </h2>
-          <p className="text-xl opacity-90 mb-8">
-            Contact us today for a personalized quote and discover the difference 
-            boutique cleaning service makes.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/instant-quote">
-              <Button 
-                size="sm"
-                variant="outline"
-                className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 backdrop-blur-sm sm:size-default lg:size-lg"
-                data-testid="button-cta-contact"
-              >
-                Instant Quote
-              </Button>
-            </Link>
-            <Button 
-              size="sm" 
-              className="bg-ring hover:bg-ring/90 text-primary-foreground sm:size-default lg:size-lg"
-              data-testid="button-cta-whatsapp"
-              onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for Freshen Deluxe cleaning services.')}`, '_blank', 'noopener,noreferrer')}
-            >
-              WhatsApp +971 55 436 0800
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTA />
     </div>
   );
 }

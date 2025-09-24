@@ -73,7 +73,7 @@ export default function WhyChooseUs() {
 
   return (
     <section ref={ref} className="py-32 bg-white">
-      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <div className="relative inline-block">
             <div className="absolute -inset-4 bg-gradient-to-r from-ring/20 via-ring/10 to-ring/20 rounded-full blur-xl"></div>
