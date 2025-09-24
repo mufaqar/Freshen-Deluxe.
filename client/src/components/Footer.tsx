@@ -29,7 +29,7 @@ export default function Footer({ className = "" }: FooterProps) {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4 text-center md:text-left">
-            <h4 className="font-semibold text-lg">About</h4>
+            <h4 className="text-lg">About</h4>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Dubai's most luxurious cleaning services. Boutique cleaning company 
               delivering hospitality-level service with unmatched attention to detail.
@@ -42,7 +42,7 @@ export default function Footer({ className = "" }: FooterProps) {
 
           {/* Services */}
           <div className="space-y-4 text-center md:text-left">
-            <h4 className="font-semibold text-lg">Services</h4>
+            <h4 className="text-lg">Services</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
               <li>
                 <Link href="/services">
@@ -77,7 +77,7 @@ export default function Footer({ className = "" }: FooterProps) {
 
           {/* Company */}
           <div className="space-y-4 text-center md:text-left">
-            <h4 className="font-semibold text-lg">Company</h4>
+            <h4 className="text-lg">Company</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
               <li>
                 <Link href="/about">
@@ -105,7 +105,7 @@ export default function Footer({ className = "" }: FooterProps) {
 
           {/* Contact */}
           <div className="space-y-4 text-center md:text-left">
-            <h4 className="font-semibold text-lg">Contact</h4>
+            <h4 className="text-lg">Contact</h4>
             <div className="space-y-3 text-sm">
               <div className="flex items-center justify-center md:justify-start space-x-2 text-primary-foreground/80">
                 <Phone className="h-4 w-4" />

@@ -78,40 +78,7 @@ export default function Home() {
       {/* Why Choose Us */}
       <WhyChooseUs />
 
-      {/* Testimonials */}
-      {/* <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-ring/10 text-ring" data-testid="badge-testimonials">
-              Testimonials
-            </Badge>
-            <h2 className="text-4xl md:text-5xl  text-primary mb-6">
-              What Our Clients Say
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="hover-elevate" data-testid={`testimonial-${index}`}>
-                <CardContent className="p-8">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <div key={i} className="w-5 h-5 bg-ring rounded-full mr-1"></div>
-                    ))}
-                  </div>
-                  <blockquote className="text-lg text-foreground mb-6 italic">
-                    "{testimonial.quote}"
-                  </blockquote>
-                  <div>
-                    <div className="font-semibold text-primary">{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section> */}
+     
 
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">

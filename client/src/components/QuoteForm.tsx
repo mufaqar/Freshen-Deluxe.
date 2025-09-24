@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { useSEO } from "@/hooks/use-seo";
 import { sendFormEmail, type QuoteFormData } from "@/lib/emailService";
 import { useToast } from "@/hooks/use-toast";
+import SectionHeading from "./SectionHeading";
 
 interface QuoteFormProps {
   serviceType?: string;
@@ -122,10 +123,8 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
     <div className="min-h-screen py-20 bg-background">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <Badge className="mb-4 bg-ring/10 text-ring">Get Your Quote</Badge>
-          <h1 className="text-4xl md:text-5xl  text-primary mb-6">
-            Request Your Personalized Quote
-          </h1>
+          
+          <SectionHeading title="Request Your Personalized Quote" subtitle="Get Your Quote" />
           <p className="text-xl text-muted-foreground">
             Fill out the form below and we'll send you a detailed quote
           </p>

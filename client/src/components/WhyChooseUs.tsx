@@ -77,7 +77,7 @@ export default function WhyChooseUs() {
         <div className="text-center mb-20">
           <div className="relative inline-block">
             <div className="absolute -inset-4 bg-gradient-to-r from-ring/20 via-ring/10 to-ring/20 rounded-full blur-xl"></div>
-            <h2 className="relative text-2xl md:text-3xl  text-ring  mb-4">
+            <h2 className="relative text-3xl md:text-5xl  text-ring  mb-4">
               WHY CHOOSE US
             </h2>
           </div>

@@ -50,7 +50,7 @@ export default function MinimalistServices({ services }: MinimalistServicesProps
         <div className="text-center mb-20">
           <div className="relative inline-block">
             <div className="absolute -inset-4 bg-gradient-to-r from-ring/20 via-ring/10 to-ring/20 rounded-full blur-xl"></div>
-            <h2 className="relative text-2xl md:text-3xl  text-ring  mb-4">
+            <h2 className="relative text-3xl md:text-5xl  text-ring  mb-4">
               OUR SERVICES
             </h2>
           </div>
@@ -102,7 +102,7 @@ export default function MinimalistServices({ services }: MinimalistServicesProps
         <div className="text-center mt-16">
           <Link href="/services">
             <button 
-              className="bg-ring hover:bg-ring/90 text-primary-foreground font-semibold px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-ring  text-primary-foreground  px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg  transition-all duration-300 hover:scale-105 bebas_neue tracking-wide"
             >
               VIEW ALL SERVICES
             </button>
