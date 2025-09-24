@@ -164,15 +164,7 @@ export default function HeroSection({ onBookNow, onWhatsApp }: HeroSectionProps)
                 : 'opacity-0 translate-y-4'
             }`}
           >
-            <div className="flex items-center">
-              <div className="w-2 h-2 bg-ring rounded-full mr-2"></div>
-              Available across Dubai
-            </div>
-            <div className="mx-6 w-px h-4 bg-white/30"></div>
-            <div className="flex items-center">
-              <div className="w-2 h-2 bg-ring rounded-full mr-2"></div>
-              Premium service guarantee
-            </div>
+           
           </div>
         </div>
       </div>

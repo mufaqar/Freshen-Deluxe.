@@ -120,9 +120,7 @@ export default function Services() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge className="mb-6 bg-ring/10 text-ring" data-testid="badge-services-hero">
-            Our Services
-          </Badge>
+         
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-ring mb-6 leading-tight text-center">
             Premium Cleaning Services
           </h1>
