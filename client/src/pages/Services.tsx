@@ -147,7 +147,7 @@ export default function Services() {
             Premium Cleaning Services
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-            We aim to be the best cleaning company in Dubai. Each service is
+            We aim to be the best cleaning company in Dubai. <br/>Each service is
             crafted with H10 standards - the protocols used in the world's
             leading five-star hotels, ensuring exceptional quality and trust.
           </p>

@@ -84,7 +84,7 @@ export default function About() {
     {
       title: "Happy Team",
       description:
-        "We invest in our staff's wellbeing, which translates to exceptional service for our clients.",
+        "We invest in the wellbeing of our staff.",
     },
     {
       title: "Luxury Touches",
@@ -249,7 +249,7 @@ export default function About() {
                 <img
                   src={ceo.image}
                   alt={ceo.name}
-                  className="w-full h-100 object-cover rounded-2xl"
+                  className="w-full h-[580px] object-cover object-top rounded-2xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
               </div>
@@ -274,8 +274,12 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl  mb-6">
             Experience the Difference
           </h2>
-          <p className="text-xl opacity-90 mb-8">
+          <p className="text-xl opacity-90 ">
             Ready to see what luxury hospitality standards mean for your space?
+         
+          </p>
+          <p className="text-xl opacity-90 mb-8">
+         
             Let us show you the Freshen Deluxe difference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
