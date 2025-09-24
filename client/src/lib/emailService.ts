@@ -35,10 +35,10 @@ export interface ContactFormData {
 
 // EmailJS Configuration (Replace with your EmailJS credentials)
 const EMAILJS_CONFIG = {
-  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || 'YOUR_EMAILJS_SERVICE_ID',
-  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_EMAILJS_TEMPLATE_ID',
-  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_EMAILJS_PUBLIC_KEY',
-  companyEmail: 'admin@freshendeluxe.com' // Your company email
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_md21wfn',
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_1r3ggto',
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'OxyALX4KNprsfEWHX',
+  companyEmail: 'softsgens@gmail.com' // Your company email
 };
 
 // Format quote data for email
