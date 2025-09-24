@@ -1,4 +1,5 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
+import { useState, useEffect } from "react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -6,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageLoader from "@/components/PageLoader";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
@@ -14,6 +16,22 @@ import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
 
 function Router() {
+  const [location] = useLocation();
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500); // Simulate loading time
+
+    return () => clearTimeout(timer);
+  }, [location]);
+
+  if (isLoading) {
+    return <PageLoader />;
+  }
+
   return (
     <Switch>
       <Route path="/" component={Home} />
@@ -34,7 +52,7 @@ function App() {
           <AnnouncementBar 
             message="Limited Time: Get 20% off your first deep cleaning service this month"
             actionText="Book Now"
-            onAction={() => console.log('Announcement booking clicked')}
+            onAction={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to book a cleaning service with the 20% discount.')}`, '_blank', 'noopener,noreferrer')}
           />
           <Navigation />
           <main className="flex-1">

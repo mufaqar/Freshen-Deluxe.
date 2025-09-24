@@ -225,7 +225,7 @@ export default function Contact() {
               variant="outline"
               className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10"
               data-testid="button-contact-calculator"
-              onClick={() => console.log('Contact calculator clicked')}
+              onClick={() => window.location.href = '/calculator'}
             >
               Use Price Calculator
             </Button>
@@ -233,7 +233,7 @@ export default function Contact() {
               size="lg" 
               className="bg-ring hover:bg-ring/90 text-primary-foreground"
               data-testid="button-contact-whatsapp"
-              onClick={() => console.log('Contact WhatsApp clicked')}
+              onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for cleaning services.')}`, '_blank', 'noopener,noreferrer')}
             >
               WhatsApp +971 55 436 0800
             </Button>

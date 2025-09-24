@@ -17,59 +17,62 @@ export default function Services() {
 
   const services = [
     {
-      title: "The Regular Refresh",
-      description: "Perfect for weekly care with five-star hospitality standards. Maintaining your space with the precision of Dubai's finest hotels.",
+      title: "Residential Cleaning",
+      description: "Your home, effortlessly flawless. We handle every detail so you can simply enjoy living in a space that feels fresh, calm, and cared for.",
       features: [
-        "Meticulous floor care and vacuuming",
-        "Kitchen sanitization and shine restoration",
-        "Bathroom deep disinfection",
-        "Hotel-style linen presentation",
-        "Light ambient signature fragrance",
-        "Quality inspection using H10 standards"
+        "Dusting and wiping all surfaces, furniture, and floors",
+        "Vacuuming and mopping floors",
+        "Bathroom cleaning and sanitization",
+        "Kitchen: counters, appliances, sink, and exterior cabinets",
+        "Light organization and bed linen change",
+        "Emptying bins and waste management"
       ],
       image: heroImage,
       icon: HomeIcon,
       popular: true
     },
     {
-      title: "The Complete Clean",
-      description: "Indulgent deep clean, restoring brilliance to every detail. Our most comprehensive service for those who demand perfection.",
+      title: "Deep Cleaning",
+      description: "Every corner counts. Whether it's after a renovation, a move, end-of-lease, or just because your home deserves it, we refresh your property with precision and care, leaving it spotless and revitalized.",
       features: [
-        "Enhanced kitchen and bathroom disinfection",
-        "Detailed glass, mirrors & blinds cleaning",
-        "Careful attention to carpets and upholstery",
-        "Light ambient signature fragrance",
-        "Premium touch finishing",
-        "Complete property reset"
+        "Everything in Residential Cleaning",
+        "Deep cleaning of overlooked areas: baseboards, window frames, ceilings, and light fixtures",
+        "Interior appliance cleaning (oven, microwave, fridge)",
+        "Carpet and upholstery steam cleaning",
+        "Post-renovation, post-move, end-of-lease, or general deep refresh",
+        "Walls, doors, and cabinets cleaned inside and out",
+        "Complete sanitization of all spaces"
       ],
       image: officeImage,
       icon: Building2
     },
     {
-      title: "Holiday Home & Airbnb Services",
-      description: "Tailored for discerning hosts who want to impress their guests. Ensuring five-star experiences that generate exceptional reviews.",
+      title: "Holiday Homes Cleaning",
+      description: "First impressions matter. We prepare your holiday rental to perfection, ensuring every guest walks into a space that feels welcoming, polished, and unforgettable.",
       features: [
-        "Pre-arrival property inspection",
-        "Professional cleaning with Freshen Deluxe touch",
-        "Before & after photo documentation",
-        "Lost & found management",
-        "Guest amenity coordination",
-        "Priority turnaround scheduling"
+        "Pre-check visit: team member inspects property before guest arrival",
+        "Light ambient scent: subtle fragrance throughout from premium brand",
+        "Welcome gift: luxury chocolates as thoughtful touch",
+        "Property photos: before and after cleaning for documentation",
+        "Linen service (extra cost): hotel-quality sheets and towels",
+        "Priority turnaround scheduling for guest arrivals"
       ],
       image: airbnbImage,
       icon: Bed,
-      popular: true
+      popular: true,
+      specialTouches: true
     },
     {
-      title: "Commercial & Office Spaces",
-      description: "Bringing hospitality-level precision to your business environment. Creating spaces that reflect your company's commitment to quality.",
+      title: "Commercial Cleaning",
+      description: "Impress at every turn. Perfect for buildings, facilities, lobbies, and staircases, our team creates immaculate spaces that reflect professionalism, attention to detail, and care for everyone who steps inside.",
       features: [
-        "H10 cleaning standards implementation",
-        "Flexible scheduling for business operations",
-        "Deep sanitization protocols",
-        "Professional presentation maintenance",
-        "Eco-conscious cleaning solutions",
-        "Quality assurance reporting"
+        "Cleaning of buildings and offices: lobbies, hallways, staircases, and elevators",
+        "Disinfection of common areas",
+        "Waste management and recycling",
+        "Floors: sweeping, mopping, vacuuming as appropriate",
+        "Glass and window cleaning (interior and accessible exterior)",
+        "Bathroom cleaning and sanitization",
+        "Attention to details reflecting professionalism for clients and staff"
       ],
       image: officeImage,
       icon: Building2
@@ -125,7 +128,7 @@ export default function Services() {
       {/* Services Grid */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
             {services.map((service, index) => (
               <ServiceCard
                 key={index}

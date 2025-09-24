@@ -10,6 +10,7 @@ interface ServiceCardProps {
   image: string;
   icon: LucideIcon;
   popular?: boolean;
+  specialTouches?: boolean;
   onGetQuote?: () => void;
 }
 
@@ -20,18 +21,13 @@ export default function ServiceCard({
   image,
   icon: Icon,
   popular = false,
+  specialTouches = false,
   onGetQuote
 }: ServiceCardProps) {
   return (
-    <Card className="relative overflow-hidden group hover-elevate">
-      {popular && (
-        <Badge className="absolute top-4 right-4 z-10 bg-ring text-primary-foreground">
-          Most Popular
-        </Badge>
-      )}
-      
+    <Card className="relative overflow-hidden group hover-elevate h-full flex flex-col">
       {/* Image */}
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-56 overflow-hidden flex-shrink-0">
         <img 
           src={image} 
           alt={title}
@@ -41,27 +37,63 @@ export default function ServiceCard({
         <div className="absolute bottom-4 left-4">
           <Icon className="h-8 w-8 text-white" />
         </div>
+        {popular && (
+          <Badge className="absolute top-4 right-4 z-20 bg-ring text-primary-foreground shadow-lg">
+            Most Popular
+          </Badge>
+        )}
       </div>
 
-      <CardHeader className="pb-4">
-        <CardTitle className="text-xl font-serif text-primary">{title}</CardTitle>
-        <CardDescription className="text-muted-foreground">{description}</CardDescription>
+      <CardHeader className="pb-4 flex-shrink-0">
+        <CardTitle className="text-xl font-serif text-primary leading-tight">{title}</CardTitle>
+        <CardDescription className="text-muted-foreground leading-relaxed">{description}</CardDescription>
       </CardHeader>
 
-      <CardContent className="space-y-4">
-        <div>
-          <h4 className="font-semibold text-foreground mb-2">Includes:</h4>
-          <ul className="space-y-1">
+      <CardContent className="space-y-4 flex-grow flex flex-col">
+        <div className="flex-grow">
+          <h4 className="font-semibold text-foreground mb-3">Includes:</h4>
+          <ul className="space-y-2">
             {features.map((feature, index) => (
-              <li key={index} className="flex items-center text-sm text-muted-foreground">
-                <div className="w-1.5 h-1.5 bg-ring rounded-full mr-2 flex-shrink-0"></div>
-                {feature}
+              <li key={index} className="flex items-start text-sm text-muted-foreground">
+                <div className="w-1.5 h-1.5 bg-ring rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                <span className="leading-relaxed">{feature}</span>
               </li>
             ))}
           </ul>
+          
+          {specialTouches && (
+            <div className="mt-6 p-4 bg-gradient-to-r from-ring/10 to-primary/10 rounded-lg border border-ring/20">
+              <h5 className="font-semibold text-ring mb-3 flex items-center">
+                <span className="text-lg mr-2">✨</span>
+                Our Special Airbnb Touches
+              </h5>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center text-muted-foreground">
+                  <div className="w-1.5 h-1.5 bg-ring rounded-full mr-3 flex-shrink-0"></div>
+                  <span>Pre-check visit & property inspection</span>
+                </div>
+                <div className="flex items-center text-muted-foreground">
+                  <div className="w-1.5 h-1.5 bg-ring rounded-full mr-3 flex-shrink-0"></div>
+                  <span>Light ambient scent from premium brand</span>
+                </div>
+                <div className="flex items-center text-muted-foreground">
+                  <div className="w-1.5 h-1.5 bg-ring rounded-full mr-3 flex-shrink-0"></div>
+                  <span>Welcome gift: luxury chocolates</span>
+                </div>
+                <div className="flex items-center text-muted-foreground">
+                  <div className="w-1.5 h-1.5 bg-ring rounded-full mr-3 flex-shrink-0"></div>
+                  <span>Before & after property photos</span>
+                </div>
+                <div className="flex items-center text-muted-foreground">
+                  <div className="w-1.5 h-1.5 bg-ring rounded-full mr-3 flex-shrink-0"></div>
+                  <span>Linen service (extra cost)</span>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
-        <div className="pt-4 border-t border-border">
+        <div className="pt-4 border-t border-border mt-auto">
           <Button 
             className="w-full bg-primary hover:bg-primary/90"
             onClick={onGetQuote}

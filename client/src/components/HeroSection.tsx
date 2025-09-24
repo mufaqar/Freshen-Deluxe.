@@ -23,13 +23,13 @@ export default function HeroSection({ onBookNow, onWhatsApp }: HeroSectionProps)
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight">
-            For Those Who Value{" "}
-            <span className="text-ring">Quality</span>
+            Dubai's Most{" "}
+            <span className="text-ring">Luxurious</span> Cleaning
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-            We don't just clean homes... we curate spaces that embody elegance. 
-            Bringing hotel-level precision to Dubai's most prestigious properties.
+            Experience boutique cleaning services with H10 hospitality standards. 
+            We curate spaces that embody elegance for Dubai's most discerning clients.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

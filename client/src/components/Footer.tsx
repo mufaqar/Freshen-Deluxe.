@@ -11,30 +11,37 @@ export default function Footer({ className = "" }: FooterProps) {
   return (
     <footer className={`bg-primary text-primary-foreground ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <Link href="/">
-              <div className="cursor-pointer" data-testid="link-footer-logo">
+        {/* Logo Section - Full Width */}
+        <div className="flex justify-start mb-8">
+          <Link href="/">
+            <div className="cursor-pointer" data-testid="link-footer-logo">
+              <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-white/20 shadow-lg">
                 <img 
                   src={logo} 
                   alt="Freshen Deluxe - Boutique Cleaning Services" 
-                  className="h-10 w-auto"
+                  className="h-40 w-auto"
                 />
               </div>
-            </Link>
-            <p className="text-primary-foreground/80 text-sm">
+            </div>
+          </Link>
+        </div>
+
+        <div className="grid md:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4 text-center md:text-left">
+            <h4 className="font-semibold text-lg">About</h4>
+            <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Dubai's most luxurious cleaning services. Boutique cleaning company 
               delivering hospitality-level service with unmatched attention to detail.
             </p>
-            <div className="flex items-center space-x-2 text-sm text-primary-foreground/80">
+            <div className="flex items-center justify-center md:justify-start space-x-2 text-sm text-primary-foreground/80">
               <MapPin className="h-4 w-4" />
               <span>Serving all of Dubai</span>
             </div>
           </div>
 
           {/* Services */}
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <h4 className="font-semibold text-lg">Services</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
               <li>
@@ -69,7 +76,7 @@ export default function Footer({ className = "" }: FooterProps) {
           </div>
 
           {/* Company */}
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <h4 className="font-semibold text-lg">Company</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
               <li>
@@ -97,31 +104,33 @@ export default function Footer({ className = "" }: FooterProps) {
           </div>
 
           {/* Contact */}
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <h4 className="font-semibold text-lg">Contact</h4>
             <div className="space-y-3 text-sm">
-              <div className="flex items-center space-x-2 text-primary-foreground/80">
+              <div className="flex items-center justify-center md:justify-start space-x-2 text-primary-foreground/80">
                 <Phone className="h-4 w-4" />
                 <a href="tel:+971554360800" className="hover:text-ring transition-colors">
                   +971 55 436 0800
                 </a>
               </div>
-              <div className="flex items-center space-x-2 text-primary-foreground/80">
+              <div className="flex items-center justify-center md:justify-start space-x-2 text-primary-foreground/80">
                 <Mail className="h-4 w-4" />
                 <a href="mailto:admin@freshendeluxe.com" className="hover:text-ring transition-colors">
                   admin@freshendeluxe.com
                 </a>
               </div>
-              <Button 
-                size="sm"
-                variant="outline"
-                className="mt-4 text-primary-foreground border-primary-foreground/20 hover:bg-primary-foreground/10"
-                onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for Freshen Deluxe cleaning services.')}`, '_blank', 'noopener,noreferrer')}
-                data-testid="button-footer-whatsapp"
-              >
-                <MessageSquare className="mr-2 h-4 w-4" />
-                WhatsApp
-              </Button>
+              <div className="flex justify-center md:justify-start">
+                <Button 
+                  size="sm"
+                  variant="outline"
+                  className="mt-4 text-primary-foreground border-primary-foreground/20 hover:bg-primary-foreground/10"
+                  onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to get a quote for Freshen Deluxe cleaning services.')}`, '_blank', 'noopener,noreferrer')}
+                  data-testid="button-footer-whatsapp"
+                >
+                  <MessageSquare className="mr-2 h-4 w-4" />
+                  WhatsApp
+                </Button>
+              </div>
             </div>
           </div>
         </div>

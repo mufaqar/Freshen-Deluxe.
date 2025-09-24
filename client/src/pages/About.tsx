@@ -3,6 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Heart, Award, Users, Sparkles } from "lucide-react";
 import { useSEO } from "@/hooks/use-seo";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import teamImage from "@assets/pexels-cottonbro-6466216_1757788137470.jpg";
 import heroImage from "@assets/pexels-cottonbro-6466492_1757788137475.jpg";
 
@@ -70,53 +72,86 @@ export default function About() {
               About Us
             </Badge>
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
-              For Those Who Value{" "}
-              <span className="text-ring">Quality</span>
+              Born from{" "}
+              <span className="text-ring">Luxury Hospitality</span>
             </h1>
             <p className="text-xl text-white/90 leading-relaxed">
               We don't aim to be the biggest cleaning company in Dubai. We aim to be the most trusted. 
-              We don't just clean homes... we curate spaces that embody elegance.
+              Our story begins with five-star hotel standards, now brought to your doorstep.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Our Story */}
-      <section className="py-20 bg-background">
+      {/* Our Story - Zigzag Timeline with Scroll Animations */}
+      <section className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-8">
-                Our Story
-              </h2>
-              <div className="space-y-6 text-lg text-muted-foreground">
-                <p>
-                  Crafted from a background in five-star hospitality, we bring hotel-level precision 
-                  to private residences, holiday homes, and premium commercial spaces across Dubai. 
-                  Our team is trained to H10 cleaning standards - the rigorous protocols used in the 
-                  world's leading five-star hotels.
-                </p>
-                <p>
-                  We focus on creating spaces where every detail is noticed and cared for. 
-                  Our difference lies not only in the consistency of our work, but in the 
-                  premium touches that transform ordinary cleaning into an extraordinary experience.
-                </p>
-                <p>
-                  We believe that by treating our staff exceptionally well, they will naturally 
-                  deliver amazing results. This philosophy extends to taking the mental load off 
-                  our clients and providing complete peace of mind through our organization and 
-                  customer service excellence.
-                </p>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <img 
-                src={teamImage} 
-                alt="Our professional team"
-                className="rounded-lg shadow-lg w-full"
-              />
-            </div>
+          <motion.div 
+            className="text-center mb-20"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-6xl font-serif font-bold text-primary mb-8">
+              Our Journey
+            </h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              From inspiration to excellence, discover the story behind Dubai's most trusted luxury cleaning service
+            </p>
+          </motion.div>
+
+          {/* Zigzag Timeline Container */}
+          <div className="relative">
+            {/* Central Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-0.5 w-1 h-full bg-gradient-to-b from-ring/20 via-ring to-ring/20 hidden md:block"></div>
+
+            {/* Timeline Items */}
+            <TimelineItem
+              side="left"
+              icon="💡"
+              chapter="Chapter 1"
+              title="Inspiration"
+              quote="Arriving in Dubai, we realized cleaning could be different: punctual, flawless, uncompromising."
+              description="Dubai's skyline sparkled with possibility, but behind the gleaming facades, we noticed something missing. The city deserved cleaning services that matched its ambition—services that didn't just clean, but elevated every space to match the luxury and precision that Dubai represents. We saw an opportunity to bring five-star hotel standards to private homes and commercial spaces."
+            />
+
+            <TimelineItem
+              side="right"
+              icon="🎯"
+              chapter="Chapter 2"
+              title="Our Purpose"
+              quote="We aim to free our clients from daily stress, transforming cleaning into a moment of pure calm—managing everything so it's not just cleaning, it's an easier life."
+              description="Life in Dubai moves fast. Between work, family, and the endless opportunities this city offers, cleaning shouldn't be another burden. We envisioned a service that would handle every detail, from the smallest corner to the grandest space, allowing our clients to focus on what truly matters. Our purpose became clear: to transform cleaning from a chore into a luxury experience that enhances your quality of life."
+            />
+
+            <TimelineItem
+              side="left"
+              icon="⭐"
+              chapter="Chapter 3"
+              title="What Sets Us Apart"
+              quote="Our difference lies in a dedicated, loyal team treated like family—because when people are valued, excellence follows."
+              description="We believe that exceptional service comes from exceptional people. That's why we invest in our team like family—providing fair wages, comprehensive training, and genuine care. When our staff feels valued and respected, they naturally deliver their best work. This philosophy creates a positive cycle: happy employees create happy clients, and happy clients create a thriving business. Our team's loyalty and dedication are the foundation of everything we do."
+            />
+
+            <TimelineItem
+              side="right"
+              icon="🏆"
+              chapter="Chapter 4"
+              title="Operational Excellence"
+              quote="Our staff are trained to five-star hotel standards, ensuring precision and meticulous attention to every detail."
+              description="Drawing from years of experience in Dubai's luxury hospitality sector, we've developed training programs that mirror the exacting standards of five-star hotels. Every team member learns the H10 cleaning protocols—the same rigorous standards used in the world's most prestigious hotels. From the way we fold towels to the angle we position furniture, every action is intentional, every detail matters. This commitment to operational excellence ensures consistent, exceptional results every time."
+            />
+
+            <TimelineItem
+              side="left"
+              icon="✨"
+              chapter="Today"
+              title="Today, For You"
+              quote="We provide exclusive service to Dubai's most discerning homes, creating spotless spaces so you can relax and enjoy your time."
+              description="Today, Freshen Deluxe stands as Dubai's most trusted luxury cleaning service. We've built our reputation one satisfied client at a time, earning the trust of families, businesses, and property managers across the city. Our exclusive approach means we're selective about the clients we serve, ensuring we can deliver the personalized attention and exceptional quality that defines our brand. When you choose Freshen Deluxe, you're not just getting a cleaning service—you're joining a community of people who value excellence, appreciate quality, and understand that life is too short to worry about cleaning."
+              isSpecial={true}
+            />
           </div>
         </div>
       </section>
@@ -224,7 +259,7 @@ export default function About() {
               variant="outline"
               className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10"
               data-testid="button-about-contact"
-              onClick={() => console.log('About contact clicked')}
+              onClick={() => window.location.href = '/contact'}
             >
               Get in Touch
             </Button>
@@ -232,13 +267,108 @@ export default function About() {
               size="lg" 
               className="bg-ring hover:bg-ring/90 text-primary-foreground"
               data-testid="button-about-services"
-              onClick={() => console.log('About services clicked')}
+              onClick={() => window.location.href = '/services'}
             >
               View Our Services
             </Button>
           </div>
         </div>
       </section>
+    </div>
+  );
+}
+
+// Timeline Item Component
+interface TimelineItemProps {
+  side: 'left' | 'right';
+  icon: string;
+  chapter: string;
+  title: string;
+  quote: string;
+  description: string;
+  isSpecial?: boolean;
+}
+
+function TimelineItem({ side, icon, chapter, title, quote, description, isSpecial = false }: TimelineItemProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const cardVariants = {
+    hidden: { 
+      opacity: 0, 
+      x: side === 'left' ? -100 : 100,
+      scale: 0.8
+    },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const iconVariants = {
+    hidden: { 
+      opacity: 0, 
+      scale: 0,
+      rotate: -180
+    },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      rotate: 0,
+      transition: {
+        duration: 0.6,
+        delay: 0.2,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  return (
+    <div className="relative mb-32">
+      {/* Timeline Line Connection */}
+      <div className="absolute left-1/2 transform -translate-x-0.5 w-1 h-16 bg-gradient-to-b from-ring to-ring hidden md:block"></div>
+      
+      {/* Content Container */}
+      <div className={`flex items-center ${side === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col`}>
+        {/* Icon */}
+        <motion.div
+          ref={ref}
+          variants={iconVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-ring to-ring/80 rounded-full flex items-center justify-center z-20 shadow-xl shadow-ring/20 border-2 border-white/20 mx-auto md:mx-0"
+        >
+          <span className="text-3xl">{icon}</span>
+        </motion.div>
+
+        {/* Card */}
+        <motion.div
+          variants={cardVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className={`flex-1 mt-8 md:mt-0 ${side === 'left' ? 'md:pr-16 md:pl-8' : 'md:pl-16 md:pr-8'}`}
+        >
+          <div className={`bg-gradient-to-br ${isSpecial ? 'from-ring/20 via-primary/10 to-ring/20' : 'from-card to-card/80'} p-8 rounded-2xl shadow-xl hover-elevate border ${isSpecial ? 'border-ring/30' : 'border-ring/10'} backdrop-blur-sm`}>
+            <Badge className={`mb-4 ${isSpecial ? 'bg-gradient-to-r from-ring/30 to-ring/20 text-ring border border-ring/30' : 'bg-gradient-to-r from-ring/20 to-ring/10 text-ring border border-ring/20'}`}>
+              {chapter}
+            </Badge>
+            <h3 className="text-4xl font-serif font-bold text-primary mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+              {title}
+            </h3>
+            <p className="text-xl text-muted-foreground leading-relaxed mb-6 font-medium">
+              {quote}
+            </p>
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              {description}
+            </p>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 }

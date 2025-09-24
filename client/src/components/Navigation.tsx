@@ -27,7 +27,7 @@ export default function Navigation({ className = "" }: NavigationProps) {
   };
 
   return (
-    <nav className={`bg-background border-b border-border ${className}`}>
+    <nav className={`sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -36,7 +36,7 @@ export default function Navigation({ className = "" }: NavigationProps) {
               <img 
                 src={logo} 
                 alt="Freshen Deluxe - Boutique Cleaning Services" 
-                className="h-8 w-auto"
+                className="h-40 w-auto"
               />
             </div>
           </Link>
@@ -60,7 +60,7 @@ export default function Navigation({ className = "" }: NavigationProps) {
             <Button 
               className="bg-ring hover:bg-ring/90 text-primary-foreground"
               data-testid="button-book-now"
-              onClick={() => console.log('Book Now clicked')}
+              onClick={() => window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to book a cleaning service.')}`, '_blank', 'noopener,noreferrer')}
             >
               Book Now
             </Button>
@@ -107,7 +107,7 @@ export default function Navigation({ className = "" }: NavigationProps) {
                   className="w-full bg-ring hover:bg-ring/90 text-primary-foreground"
                   data-testid="button-mobile-book-now"
                   onClick={() => {
-                    console.log('Mobile Book Now clicked');
+                    window.open(`https://wa.me/971554360800?text=${encodeURIComponent('Hello! I would like to book a cleaning service.')}`, '_blank', 'noopener,noreferrer');
                     setIsMobileMenuOpen(false);
                   }}
                 >

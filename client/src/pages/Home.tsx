@@ -19,41 +19,43 @@ export default function Home() {
 
   const services = [
     {
-      title: "The Regular Refresh",
-      description: "Perfect for weekly care with five-star hospitality standards",
+      title: "Residential Cleaning",
+      description: "Your home, effortlessly flawless. We handle every detail so you can simply enjoy living in a space that feels fresh, calm, and cared for.",
       features: [
-        "Meticulous floor care and vacuuming",
-        "Kitchen sanitization and shine restoration",
-        "Bathroom deep disinfection",
-        "Hotel-style linen presentation"
+        "Dusting and wiping all surfaces, furniture, and floors",
+        "Vacuuming and mopping floors",
+        "Bathroom cleaning and sanitization",
+        "Kitchen: counters, appliances, sink, and exterior cabinets"
       ],
       image: heroImage,
       icon: HomeIcon,
       popular: true
     },
     {
-      title: "The Complete Clean",
-      description: "Indulgent deep clean, restoring brilliance to every detail",
+      title: "Deep Cleaning",
+      description: "Every corner counts. Whether it's after a renovation, a move, end-of-lease, or just because your home deserves it, we refresh your property with precision and care, leaving it spotless and revitalized.",
       features: [
-        "Enhanced kitchen and bathroom disinfection",
-        "Detailed glass, mirrors & blinds cleaning",
-        "Careful attention to carpets and upholstery",
-        "Light ambient signature fragrance"
+        "Everything in Residential Cleaning",
+        "Deep cleaning of overlooked areas: baseboards, window frames, ceilings, and light fixtures",
+        "Interior appliance cleaning (oven, microwave, fridge)",
+        "Carpet and upholstery steam cleaning"
       ],
       image: officeImage,
       icon: Building2
     },
     {
-      title: "Holiday Home & Airbnb Services",
-      description: "Tailored for discerning hosts who want to impress their guests",
+      title: "Holiday Homes Cleaning",
+      description: "First impressions matter. We prepare your holiday rental to perfection, ensuring every guest walks into a space that feels welcoming, polished, and unforgettable.",
       features: [
-        "Pre-arrival property inspection",
-        "Professional cleaning with Freshen Deluxe touch",
-        "Before & after photo documentation",
-        "Lost & found management"
+        "Pre-check visit: team member inspects property before guest arrival",
+        "Light ambient scent: subtle fragrance throughout from premium brand",
+        "Welcome gift: luxury chocolates as thoughtful touch",
+        "Property photos: before and after cleaning for documentation"
       ],
       image: airbnbImage,
-      icon: Bed
+      icon: Bed,
+      popular: true,
+      specialTouches: true
     }
   ];
 
@@ -96,7 +98,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {services.map((service, index) => (
               <ServiceCard
                 key={index}
