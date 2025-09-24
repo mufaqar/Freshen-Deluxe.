@@ -38,7 +38,7 @@ const EMAILJS_CONFIG = {
   serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_md21wfn',
   templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_1r3ggto',
   publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'OxyALX4KNprsfEWHX',
-  companyEmail: 'mufaqar@gmail.com' // Your company email
+  companyEmail: 'admin@freshendeluxe.com' // Your company email
 };
 
 // Format quote data for email
