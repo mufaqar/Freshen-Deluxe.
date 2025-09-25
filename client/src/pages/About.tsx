@@ -98,7 +98,7 @@ export default function About() {
     role: "CEO & Founder",
     image: ceoImage,
     description:
-      "Freshen Deluxe was founded by Maria Angulo, a passionate entrepreneur with several years of experience in luxury hospitality and high-standard cleaning. With a strong background in business consulting, Maria combines strategic insight with hands-on expertise to drive growth and operational excellence. Committed to exceptional service and meticulous care, Maria leads the team in delivering a personalised, top-tier cleaning experience to every client.",
+      "Freshen Deluxe was founded by Maria Angulo, a passionate entrepreneur with several years of experience in luxury hospitality and high-standard cleaning.<br/> With a strong background in business consulting, Maria combines strategic insight with hands-on expertise to drive growth and operational excellence. Committed to exceptional service and meticulous care, Maria leads the team in delivering a personalised, top-tier cleaning experience to every client.",
   };
 
   return (
@@ -249,20 +249,21 @@ export default function About() {
                 <img
                   src={ceo.image}
                   alt={ceo.name}
-                  className="w-full h-[480px] object-cover object-top rounded-2xl"
+                  className="w-full h-[450px] object-cover object-top rounded-2xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
               </div>
             </div>
 
             <div className="order-1 lg:order-2">
-              <h3 className="text-3xl md:text-4xl  text-primary mb-4">
+              <h3 className="text-3xl md:text-4xl  text-primary ">
                 {ceo.name}
               </h3>
-              <p className="text-xl text-ring mb-6">{ceo.role}</p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                {ceo.description}
-              </p>
+              <p className="text-xl text-ring mb-3">{ceo.role}</p>
+             <p
+  className="text-lg text-muted-foreground leading-relaxed"
+  dangerouslySetInnerHTML={{ __html: ceo.description }}
+/>
             </div>
           </div>
         </div>
