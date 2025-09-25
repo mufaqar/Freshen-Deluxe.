@@ -132,7 +132,7 @@ export default function About() {
               <Link href="/services">
                 <Button
                   size="lg"
-                  className="bg-ring hover:bg-ring/90 text-primary-foreground font-semibold px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                  className="bg-ring hover:bg-ring/90 text-primary-foreground px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   data-testid="button-about-services"
                 >
                   Our Services
@@ -142,7 +142,7 @@ export default function About() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="text-white border-white/30 hover:bg-white/10 backdrop-blur-sm font-semibold px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                  className="text-white border-white/30 hover:bg-white/10 backdrop-blur-sm px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   data-testid="button-about-contact"
                 >
                   Get in Touch
@@ -249,7 +249,7 @@ export default function About() {
                 <img
                   src={ceo.image}
                   alt={ceo.name}
-                  className="w-full h-[580px] object-cover object-top rounded-2xl"
+                  className="w-full h-[480px] object-cover object-top rounded-2xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
               </div>
@@ -259,7 +259,7 @@ export default function About() {
               <h3 className="text-3xl md:text-4xl  text-primary mb-4">
                 {ceo.name}
               </h3>
-              <p className="text-xl text-ring font-semibold mb-6">{ceo.role}</p>
+              <p className="text-xl text-ring mb-6">{ceo.role}</p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 {ceo.description}
               </p>

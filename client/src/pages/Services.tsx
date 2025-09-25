@@ -153,7 +153,7 @@ export default function Services() {
           </p>
           <Button
             size="lg"
-            className="bg-ring  text-primary-foreground font-semibold px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-ring  text-primary-foreground px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
             data-testid="button-services-quote"
             onClick={() =>
               window.open(
@@ -263,7 +263,7 @@ export default function Services() {
 
                         {service.specialTouches && (
                           <div className="bg-ring/5 p-4 rounded-lg">
-                            <h4 className="text-sm font-semibold text-ring mb-3">
+                            <h4 className="text-sm text-ring mb-3">
                               Luxury Touches:
                             </h4>
                             <ul className="space-y-2">

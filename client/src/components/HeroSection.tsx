@@ -137,7 +137,7 @@ export default function HeroSection({ onBookNow, onWhatsApp }: HeroSectionProps)
           >
             <Button
               size="lg"
-              className="bg-ring hover:bg-ring/90 text-primary-foreground font-semibold px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-ring hover:bg-ring/90 text-primary-foreground px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               onClick={onBookNow}
               data-testid="button-hero-book-now"
             >
@@ -148,7 +148,7 @@ export default function HeroSection({ onBookNow, onWhatsApp }: HeroSectionProps)
             <Button
               size="lg"
               variant="outline"
-              className="text-white border-white/30 hover:bg-white/10 backdrop-blur-sm font-semibold px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="text-white border-white/30 hover:bg-white/10 backdrop-blur-sm px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               onClick={onWhatsApp}
               data-testid="button-hero-whatsapp"
             >
