@@ -6,6 +6,7 @@ import {
   Crown, 
   Heart 
 } from 'lucide-react';
+import SectionHeading from './SectionHeading';
 
 interface WhyChooseUsItem {
   icon: React.ComponentType<any>;
@@ -75,13 +76,12 @@ export default function WhyChooseUs() {
     <section ref={ref} className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <div className="relative inline-block">
-            <div className="absolute -inset-4 bg-gradient-to-r from-ring/20 via-ring/10 to-ring/20 rounded-full blur-xl"></div>
-            <h2 className="relative text-3xl md:text-5xl  text-ring  mb-4">
-              WHY CHOOSE US
-            </h2>
-          </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-ring to-transparent mx-auto mt-6"></div>
+          
+            
+
+            <SectionHeading title="WHY CHOOSE US" subtitle="Clean Beyond Expectations" />
+
+          
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">

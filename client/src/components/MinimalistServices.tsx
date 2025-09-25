@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'wouter';
 import { LucideIcon } from 'lucide-react';
+import SectionHeading from './SectionHeading';
 
 interface Service {
   title: string;
@@ -48,13 +49,8 @@ export default function MinimalistServices({ services }: MinimalistServicesProps
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Custom Heading Design */}
         <div className="text-center mb-20">
-          <div className="relative inline-block">
-            <div className="absolute -inset-4 bg-gradient-to-r from-ring/20 via-ring/10 to-ring/20 rounded-full blur-xl"></div>
-            <h2 className="relative text-3xl md:text-5xl  text-ring  mb-4">
-              OUR SERVICES
-            </h2>
-          </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-ring to-transparent mx-auto mt-6"></div>
+          <SectionHeading title="OUR SERVICES" subtitle="Tailored to Your Space" />
+         
         </div>
 
         {/* Services Grid */}
