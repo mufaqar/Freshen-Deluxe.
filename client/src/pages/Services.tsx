@@ -114,19 +114,19 @@ export default function Services() {
   const features = [
     {
       icon: Clock,
-      title: "Flexible Scheduling",
+      title: "Peace of mind",
       description:
-        "Service times that work with your lifestyle and business hours",
+        "Trusted professionals and uncompromising standards that ensure your comfort, safety, and confidence.",
     },
     {
       icon: Shield,
-      title: "Fully Insured",
-      description: "Complete insurance coverage for your peace of mind",
+      title: "Tailored services",
+      description: "Personalized solutions designed to match your lifestyle, preferences, and unique home environment.",
     },
     {
       icon: Sparkles,
-      title: "Luxury Touches",
-      description: "Premium fragrances, chocolates, and thoughtful details",
+      title: "Luxury touches",
+      description: "Finishing details that elevate everyday cleaning into an experience of elegance and refinement.",
     },
   ];
 
