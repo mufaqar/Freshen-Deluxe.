@@ -83,8 +83,7 @@ export default function About() {
     },
     {
       title: "Happy Team",
-      description:
-        "We invest in the wellbeing of our staff.",
+      description: "We invest in the wellbeing of our staff.",
     },
     {
       title: "Luxury Touches",
@@ -98,7 +97,7 @@ export default function About() {
     role: "CEO & Founder",
     image: ceoImage,
     description:
-      "Freshen Deluxe was founded by Maria Angulo, a passionate entrepreneur with several years of experience in luxury hospitality and high-standard cleaning.<br/> With a strong background in business consulting, Maria combines strategic insight with hands-on expertise to drive growth and operational excellence. Committed to exceptional service and meticulous care, Maria leads the team in delivering a personalised, top-tier cleaning experience to every client.",
+      "<p>Freshen Deluxe was founded by Maria Angulo, a passionate entrepreneur with several years of experience in luxury hospitality and high-standard cleaning.</p><p> With a strong background in business consulting, Maria combines strategic insight with hands-on expertise to drive growth and operational excellence. Committed to exceptional service and meticulous care, Maria leads the team in delivering a personalised, top-tier cleaning experience to every client.</p>",
   };
 
   return (
@@ -119,7 +118,6 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            
             <h1 className="text-4xl md:text-6xl  text-ring mb-6">
               For Those Who Value Quality
             </h1>
@@ -154,22 +152,21 @@ export default function About() {
       </section>
 
       <div className=" bg-card py-12">
-       <SectionHeading 
-  title="Our Story" 
-  subtitle="What Drives Us" 
-/>
+        <SectionHeading title="Our Story" subtitle="What Drives Us" />
         <VerticalTimeline>
           {timelineData.map((item, index) => (
             <VerticalTimelineElement
               key={index}
-              contentStyle={{ background: "transparent", color: "#d6b771", boxShadow: "none" }}
+              contentStyle={{
+                background: "transparent",
+                color: "#d6b771",
+                boxShadow: "none",
+              }}
               contentArrowStyle={{ borderRight: "0px solid  #d6b771" }}
               iconStyle={{ background: "#d6b771", color: "#fff" }}
               icon={item.icon}
             >
-              <h3 className=" text-2xl  ">
-                {item.title}
-              </h3>
+              <h3 className=" text-2xl  ">{item.title}</h3>
               <p className=" text-primary">{item.description}</p>
             </VerticalTimelineElement>
           ))}
@@ -196,9 +193,7 @@ export default function About() {
                 data-testid={`value-${index}`}
               >
                 <CardContent className="p-8">
-                  <h3 className="text-xl text-primary mb-4">
-                    {value.title}
-                  </h3>
+                  <h3 className="text-xl text-primary mb-4">{value.title}</h3>
                   <p className="text-muted-foreground">{value.description}</p>
                 </CardContent>
               </Card>
@@ -243,7 +238,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 ">
             <div className="order-2 lg:order-1">
               <div className="relative">
                 <img
@@ -255,15 +250,15 @@ export default function About() {
               </div>
             </div>
 
-            <div className="order-1 lg:order-2">
+            <div className="order-1 lg:order-2 pt-8">
               <h3 className="text-3xl md:text-4xl  text-primary ">
                 {ceo.name}
               </h3>
               <p className="text-xl text-ring mb-3">{ceo.role}</p>
-             <p
-  className="text-lg text-muted-foreground leading-relaxed"
-  dangerouslySetInnerHTML={{ __html: ceo.description }}
-/>
+              <div
+                className="text-lg text-muted-foreground leading-relaxed flex flex-col gap-3"
+                dangerouslySetInnerHTML={{ __html: ceo.description }}
+              />
             </div>
           </div>
         </div>
@@ -277,10 +272,8 @@ export default function About() {
           </h2>
           <p className="text-xl opacity-90 ">
             Ready to see what luxury hospitality standards mean for your space?
-         
           </p>
           <p className="text-xl opacity-90 mb-8">
-         
             Let us show you the Freshen Deluxe difference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
