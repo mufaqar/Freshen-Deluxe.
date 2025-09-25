@@ -244,21 +244,21 @@ export default function Services() {
                   </CardHeader>
 
                   <CardContent className="pt-0">
-                    <CardDescription className="text-sm text-muted-foreground mb-4">
+                    <CardDescription className="text-base text-muted-foreground mb-4">
                       {service.description}
                     </CardDescription>
 
                     {isExpanded && (
                       <div className="space-y-4 animate-in slide-in-from-top-2 duration-300">
                         <div>
-                          <h4 className="text-sm  text-primary mb-2">
+                          <h4 className="text-lg  text-primary mb-2">
                             What's Included:
                           </h4>
                           <ul className="space-y-1">
                             {service.features.map((feature, featureIndex) => (
                               <li
                                 key={featureIndex}
-                                className="text-xs text-muted-foreground flex items-start"
+                                className="text-base text-muted-foreground flex items-start"
                               >
                                 <span className="w-1 h-1 bg-ring rounded-full mt-2 mr-2 flex-shrink-0"></span>
                                 {feature}
