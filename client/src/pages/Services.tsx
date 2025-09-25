@@ -1,4 +1,4 @@
-import ServiceCard from "@/components/ServiceCard";
+import { motion } from "framer-motion";
 import {
   Card,
   CardContent,
@@ -6,7 +6,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Building2,
@@ -19,7 +18,6 @@ import {
 } from "lucide-react";
 import { useSEO } from "@/hooks/use-seo";
 import { useState } from "react";
-import { Link } from "wouter";
 import heroImage from "@assets/pexels-cottonbro-6466492_1757788137475.jpg";
 import officeImage from "@assets/pexels-cottonbro-6466226_1757788137471.jpg";
 import airbnbImage from "@assets/pexels-cottonbro-6466302_1757788137478.jpg";
@@ -133,7 +131,7 @@ export default function Services() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-20 lg:py-32 min-h-[80vh] flex items-center">
         <div className="absolute inset-0">
           <img
             src={officeImage}
@@ -142,7 +140,13 @@ export default function Services() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
         </div>
+         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
           <h1 className="text-4xl md:text-6xl  text-ring mb-6 leading-tight text-center">
             Premium Cleaning Services
           </h1>
@@ -167,7 +171,9 @@ export default function Services() {
           >
            Instant Quote
           </Button>
+           </motion.div>
         </div>
+       
       </section>
 
       {/* Services Accordion */}
