@@ -151,7 +151,7 @@ export default function About() {
       </section>
 
       <div className=" bg-card py-12">
-        <SectionHeading title="Our Story" subtitle="Elegant & Premium" />
+        <SectionHeading title="Our Story" subtitle="Who we are" />
         <VerticalTimeline>
           {timelineData.map((item, index) => (
             <VerticalTimelineElement
