@@ -270,7 +270,7 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                   </h3>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="bedrooms">Number of Bedrooms </Label>
+                      <Label htmlFor="bedrooms">Number of Bedrooms *</Label>
                       <Input
                         id="bedrooms"
                         type="number"
@@ -278,11 +278,12 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                         onChange={(e) =>
                           handleInputChange("bedrooms", e.target.value)
                         }
+                        required
                       
                       />
                     </div>
                     <div>
-                      <Label htmlFor="bathrooms">Number of Bathrooms </Label>
+                      <Label htmlFor="bathrooms">Number of Bathrooms * </Label>
                       <Input
                         id="bathrooms"
                         type="number"
@@ -290,11 +291,12 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                         onChange={(e) =>
                           handleInputChange("bathrooms", e.target.value)
                         }
+                        required
                        
                       />
                     </div>
                     <div>
-                      <Label htmlFor="kitchen">Number of Kitchens</Label>
+                      <Label htmlFor="kitchen">Number of Kitchens *</Label>
                       <Input
                         id="kitchen"
                         type="number"
@@ -302,12 +304,13 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                         onChange={(e) =>
                           handleInputChange("kitchen", e.target.value)
                         }
+                        required
                         
                       />
                     </div>
                     <div>
                       <Label htmlFor="livingRooms">
-                        Number of Living Rooms 
+                        Number of Living Rooms *
                       </Label>
                       <Input
                         id="livingRooms"
@@ -316,6 +319,7 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                         onChange={(e) =>
                           handleInputChange("livingRooms", e.target.value)
                         }
+                        required
                       
                       />
                     </div>
@@ -392,7 +396,7 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                   </h3>
                   <div>
                     <Label htmlFor="numberOfProperties">
-                      Number of Properties 
+                      Number of Properties *
                     </Label>
                     <Input
                       id="numberOfProperties"
@@ -401,12 +405,13 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                       onChange={(e) =>
                         handleInputChange("numberOfProperties", e.target.value)
                       }
+                      required
                       
                     />
                   </div>
                   <div>
                     <Label htmlFor="propertyConfigurations">
-                      Property Configurations 
+                      Property Configurations *
                     </Label>
                     <Textarea
                       id="propertyConfigurations"
@@ -418,11 +423,12 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                           e.target.value
                         )
                       }
+                      required
                       
                     />
                   </div>
                   <div>
-                    <Label htmlFor="locations">Property Locations </Label>
+                    <Label htmlFor="locations">Property Locations *</Label>
                     <Textarea
                       id="locations"
                       placeholder="e.g., Dubai Marina, Downtown Dubai, JBR, etc. If multiple properties, list all neighborhoods"
@@ -430,6 +436,7 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                       onChange={(e) =>
                         handleInputChange("locations", e.target.value)
                       }
+                      required
                       
                     />
                   </div>
@@ -445,7 +452,7 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="numberOfCleaners">
-                        Number of Cleaners Needed 
+                        Number of Cleaners Needed  *
                       </Label>
                       <Input
                         id="numberOfCleaners"
@@ -454,6 +461,7 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                         onChange={(e) =>
                           handleInputChange("numberOfCleaners", e.target.value)
                         }
+                        required
                         
                       />
                     </div>
