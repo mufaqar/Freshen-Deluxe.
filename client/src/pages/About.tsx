@@ -4,7 +4,7 @@ import { useSEO } from "@/hooks/use-seo";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import heroImage from "@assets/pexels-cottonbro-6466492_1757788137475.jpg";
-import ceoImage from "/ceo.jpg";
+import ceoImage from "/ceo1.jpg";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -151,7 +151,7 @@ export default function About() {
       </section>
 
       <div className=" bg-card py-12">
-        <SectionHeading title="Our Story" subtitle="What Drives Us" />
+        <SectionHeading title="Our Story" subtitle="Elegant & Premium" />
         <VerticalTimeline>
           {timelineData.map((item, index) => (
             <VerticalTimelineElement
@@ -243,9 +243,11 @@ export default function About() {
                 <img
                   src={ceo.image}
                   alt={ceo.name}
-                  className="w-full h-[450px] object-cover object-top rounded-2xl"
+                  width={303}
+                  height={404}
+                  className="w-auto rounded-2xl mr-0 ml-auto"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+            
               </div>
             </div>
 
