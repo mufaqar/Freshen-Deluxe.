@@ -31,9 +31,9 @@ export default function Services() {
   useSEO({
     title: "Premium Cleaning Services Dubai - Freshen Deluxe",
     description:
-      "Discover our curated cleaning services: The Regular Refresh, The Complete Clean, Holiday Home & Airbnb Services, and Commercial & Office Spaces. H10 standards, luxury touches.",
+      "Discover our curated cleaning services: The Regular Refresh, The Complete Clean, Holiday Home & Airbnb Services, and Commercial & Office Spaces.  luxury touches.",
     keywords:
-      "cleaning services Dubai, regular refresh cleaning, complete deep clean, Airbnb cleaning Dubai, commercial cleaning, office cleaning, H10 cleaning standards",
+      "cleaning services Dubai, regular refresh cleaning, complete deep clean, Airbnb cleaning Dubai, commercial cleaning, office cleaning",
   });
 
   const services = [
@@ -152,7 +152,7 @@ export default function Services() {
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
             We aim to be the best cleaning company in Dubai. <br/>Each service is
-            crafted with H10 standards - the protocols used in the world's
+            crafted with standards - the protocols used in the world's
             leading five-star hotels, ensuring exceptional quality and trust.
           </p>
           <Button

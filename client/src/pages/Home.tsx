@@ -19,8 +19,8 @@ import CTA from "@/components/Cta";
 export default function Home() {
   useSEO({
     title: 'Freshen Deluxe - Dubai\'s Most Trusted Luxury Cleaning Services',
-    description: 'For those who value quality. We curate spaces that embody elegance with H10 cleaning standards. Premium boutique cleaning for residential, commercial, and Airbnb properties in Dubai.',
-    keywords: 'luxury cleaning Dubai, boutique cleaning services, H10 cleaning standards, residential cleaning Dubai, commercial cleaning, Airbnb cleaning, five-star cleaning'
+    description: 'For those who value quality. We curate spaces that embody elegance with cleaning standards. Premium boutique cleaning for residential, commercial, and Airbnb properties in Dubai.',
+    keywords: 'luxury cleaning Dubai, boutique cleaning services,  residential cleaning Dubai, commercial cleaning, Airbnb cleaning, five-star cleaning'
   });
 
   const services = [

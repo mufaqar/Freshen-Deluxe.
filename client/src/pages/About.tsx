@@ -64,7 +64,7 @@ export default function About() {
     title:
       "About Freshen Deluxe - Dubai's Most Trusted Luxury Cleaning Company",
     description:
-      "For those who value quality. Born from luxury hospitality, we bring H10 cleaning standards to Dubai. The most trusted name in luxury property care with five-star service.",
+      "For those who value quality. Born from luxury hospitality, we bring cleaning standards to Dubai. The most trusted name in luxury property care with five-star service.",
     keywords:
       "about Freshen Deluxe, luxury cleaning company Dubai, hospitality cleaning standards, five-star cleaning service, boutique cleaning Dubai",
   });
@@ -121,7 +121,7 @@ export default function About() {
               For Those Who Value Quality
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Born from luxury hospitality, we bring H10 cleaning standards to
+              Born from luxury hospitality, we bring cleaning standards to
               Dubai. The most trusted name in luxury property care with
               five-star service.
             </p>
