@@ -402,9 +402,7 @@ Our Premium Cleaning Services are designed for those who value spotless results 
         </div>
       </section>
 
-     
-      {/* CTA Section */}
-      <CTA />
+    
     </div>
   );
 }

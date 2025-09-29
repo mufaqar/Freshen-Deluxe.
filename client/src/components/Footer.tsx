@@ -3,12 +3,15 @@ import { Mail, Phone, MessageSquare, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@assets/Transparent Logo1_1757788154323.png";
 
+
 interface FooterProps {
   className?: string;
 }
 
 export default function Footer({ className = "" }: FooterProps) {
   return (
+    <>
+    
     <footer className={`bg-primary text-primary-foreground ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Logo Section - Full Width */}
@@ -182,14 +185,14 @@ export default function Footer({ className = "" }: FooterProps) {
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0 text-sm">
               <a
-                href="/privacy"
+                href="#"
                 className="text-primary-foreground/60 hover:text-ring transition-colors"
                 data-testid="link-privacy"
               >
                 Privacy Policy
               </a>
               <a
-                href="/terms"
+                href="#"
                 className="text-primary-foreground/60 hover:text-ring transition-colors"
                 data-testid="link-terms"
               >
@@ -200,5 +203,6 @@ export default function Footer({ className = "" }: FooterProps) {
         </div>
       </div>
     </footer>
+    </>
   );
 }

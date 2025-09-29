@@ -82,7 +82,7 @@ export default function Home() {
      
 
       {/* CTA Section */}
-      <CTA />
+      {/* <CTA /> */}
     </div>
   );
 }

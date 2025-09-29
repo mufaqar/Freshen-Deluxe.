@@ -14,6 +14,7 @@ import Services from "@/pages/Services";
 import CalculatorPage from "@/pages/CalculatorPage";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
+import CTA from "./components/Cta";
 
 function Router() {
   const [location] = useLocation();
@@ -56,6 +57,7 @@ function App() {
           <main className="flex-1">
             <Router />
           </main>
+            <CTA />
           <Footer />
         </div>
         <Toaster />

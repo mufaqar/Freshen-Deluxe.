@@ -205,7 +205,7 @@ export default function Contact() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      {/* <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl  mb-6">
             Experience Luxury Cleaning Today
@@ -235,7 +235,7 @@ export default function Contact() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
