@@ -118,10 +118,11 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl  text-ring mb-6">
-              For Those Who Value Quality
+          Premium Quality
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-             Our Premium Cleaning Services are designed for those who value spotless results and reliable care
+            We aim to be the best cleaning company in Dubai. 
+Our Premium Cleaning Services are designed for those who value spotless results and reliable care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services">
