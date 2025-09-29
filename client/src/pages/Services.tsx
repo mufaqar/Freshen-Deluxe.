@@ -171,11 +171,12 @@ const Yoga = (props:any) => (
             transition={{ duration: 0.8 }}
           >
           <h1 className="text-4xl md:text-6xl  text-ring mb-6 leading-tight text-center">
-            Premium Cleaning Services
+           Premium Quality
+
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-           Born from Luxury Hospitality, each service is crafted with H10 standards - the protocols used in the world’s leading five-star hotels, ensuring exceptional quality and trust.
-          </p>
+        We aim to be the best cleaning company in Dubai. 
+Our Premium Cleaning Services are designed for those who value spotless results and reliable care.  </p>
           <Button
             size="lg"
             className="bg-ring  text-primary-foreground px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
