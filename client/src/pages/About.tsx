@@ -121,9 +121,7 @@ export default function About() {
               For Those Who Value Quality
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Born from luxury hospitality, we bring cleaning standards to
-              Dubai. The most trusted name in luxury property care with
-              five-star service.
+             Our Premium Cleaning Services are designed for those who value spotless results and reliable care
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services">
