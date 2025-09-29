@@ -279,7 +279,6 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                           handleInputChange("bedrooms", e.target.value)
                         }
                         required
-                      
                       />
                     </div>
                     <div>
@@ -292,7 +291,6 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                           handleInputChange("bathrooms", e.target.value)
                         }
                         required
-                       
                       />
                     </div>
                     <div>
@@ -305,7 +303,6 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                           handleInputChange("kitchen", e.target.value)
                         }
                         required
-                        
                       />
                     </div>
                     <div>
@@ -320,7 +317,6 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                           handleInputChange("livingRooms", e.target.value)
                         }
                         required
-                      
                       />
                     </div>
                   </div>
@@ -330,24 +326,15 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
                           <Label htmlFor="frequency">Frequency </Label>
-                          <Select
+
+                          <Input
+                            id="frequency"
+                            type="text"
                             value={formData.frequency}
-                            onValueChange={(value) =>
-                              handleInputChange("frequency", value)
+                            onChange={(e) =>
+                              handleInputChange("frequency", e.target.value)
                             }
-                          >
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select frequency" />
-                            </SelectTrigger>
-                            <SelectContent>
-                              <SelectItem value="Weekly">Weekly</SelectItem>
-                              <SelectItem value="Bi-weekly">
-                                Bi-weekly
-                              </SelectItem>
-                              <SelectItem value="Monthly">Monthly</SelectItem>
-                              <SelectItem value="One-time">One-time</SelectItem>
-                            </SelectContent>
-                          </Select>
+                          />
                         </div>
                         <div>
                           <Label htmlFor="hours">Hours Requested </Label>
@@ -358,7 +345,6 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                             onChange={(e) =>
                               handleInputChange("hours", e.target.value)
                             }
-                            
                           />
                           <p className="text-xs text-muted-foreground mt-1">
                             * We can recommend the amount of hours a house like
@@ -371,9 +357,7 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
 
                   {formData.service === "Deep Cleaning" && (
                     <div>
-                      <Label htmlFor="date">
-                        Preferred Date or Time Slots 
-                      </Label>
+                      <Label htmlFor="date">Preferred Date or Time Slots</Label>
                       <Input
                         id="date"
                         placeholder="e.g., Next Saturday or Morning slots"
@@ -381,7 +365,6 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                         onChange={(e) =>
                           handleInputChange("date", e.target.value)
                         }
-                        
                       />
                     </div>
                   )}
@@ -406,7 +389,6 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                         handleInputChange("numberOfProperties", e.target.value)
                       }
                       required
-                      
                     />
                   </div>
                   <div>
@@ -424,7 +406,6 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                         )
                       }
                       required
-                      
                     />
                   </div>
                   <div>
@@ -437,7 +418,6 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                         handleInputChange("locations", e.target.value)
                       }
                       required
-                      
                     />
                   </div>
                 </div>
@@ -447,12 +427,12 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
               {formData.service === "Commercial Cleaning" && (
                 <div className="space-y-6">
                   <h3 className="text-lg text-primary border-b border-border pb-2">
-                    Commercial Cleaning Details 
+                    Commercial Cleaning Details
                   </h3>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="numberOfCleaners">
-                        Number of Cleaners Needed  *
+                        Number of Cleaners Needed *
                       </Label>
                       <Input
                         id="numberOfCleaners"
@@ -462,7 +442,6 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                           handleInputChange("numberOfCleaners", e.target.value)
                         }
                         required
-                        
                       />
                     </div>
                     <div>
@@ -474,14 +453,11 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                         onChange={(e) =>
                           handleInputChange("numberOfHours", e.target.value)
                         }
-                        
                       />
                     </div>
                   </div>
                   <div>
-                    <Label htmlFor="buildingLocation">
-                      Building Location 
-                    </Label>
+                    <Label htmlFor="buildingLocation">Building Location</Label>
                     <Input
                       id="buildingLocation"
                       placeholder="e.g., Business Bay, Downtown Dubai"
@@ -489,29 +465,23 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                       onChange={(e) =>
                         handleInputChange("buildingLocation", e.target.value)
                       }
-                      
                     />
                   </div>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="commercialFrequency">Frequency </Label>
-                      <Select
+
+                      <Input
+                        id="commercialFrequency"
+                        type="text"
                         value={formData.commercialFrequency}
-                        onValueChange={(value) =>
-                          handleInputChange("commercialFrequency", value)
+                        onChange={(e) =>
+                          handleInputChange(
+                            "commercialFrequency",
+                            e.target.value
+                          )
                         }
-                      >
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select frequency" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="Daily">Daily</SelectItem>
-                          <SelectItem value="Weekly">Weekly</SelectItem>
-                          <SelectItem value="Bi-weekly">Bi-weekly</SelectItem>
-                          <SelectItem value="Monthly">Monthly</SelectItem>
-                          <SelectItem value="One-time">One-time</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      />
                     </div>
                     <div>
                       <Label htmlFor="timeSlots">Preferred Time Slots </Label>
@@ -522,7 +492,6 @@ export default function QuoteForm({ serviceType }: QuoteFormProps) {
                         onChange={(e) =>
                           handleInputChange("timeSlots", e.target.value)
                         }
-                        
                       />
                     </div>
                   </div>
