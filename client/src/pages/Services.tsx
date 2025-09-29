@@ -174,9 +174,7 @@ const Yoga = (props:any) => (
             Premium Cleaning Services
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-            We aim to be the best cleaning company in Dubai. <br/>Each service is
-            crafted with standards - the protocols used in the world's
-            leading five-star hotels, ensuring exceptional quality and trust.
+           Born from Luxury Hospitality, each service is crafted with H10 standards - the protocols used in the world’s leading five-star hotels, ensuring exceptional quality and trust.
           </p>
           <Button
             size="lg"
