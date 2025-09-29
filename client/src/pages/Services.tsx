@@ -137,7 +137,7 @@ const Yoga = (props:any) => (
       icon: Yoga,
       title: "Peace of mind",
       description:
-        "Trusted professionals and uncompromising standards that ensure your comfort, safety, and confidence.",
+        "Trusted professionals and uncompromising standards that ensure your comfort,safety, and confidence.",
     },
     {
       icon: ScissorsCutLine,
@@ -388,7 +388,7 @@ const Yoga = (props:any) => (
                 className="text-center hover-elevate"
                 data-testid={`feature-${index}`}
               >
-                <CardContent className="p-8">
+                <CardContent className="p-6">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-ring/10 rounded-full mb-6">
                     <feature.icon className="h-8 w-8 text-ring" />
                   </div>
