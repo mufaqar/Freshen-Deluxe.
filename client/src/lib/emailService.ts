@@ -35,10 +35,10 @@ export interface ContactFormData {
 
 // EmailJS Configuration (Replace with your EmailJS credentials)
 const EMAILJS_CONFIG = {
-  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID ,
-  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-  companyEmail: import.meta.env.VITE_COMPANY_EMAIL,
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_fkkg0lu',
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_gei4sq7',
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'ViHg6iqnrPlNk-2zG',
+  companyEmail: import.meta.env.VITE_COMPANY_EMAIL  || 'info@freshendeluxe.com'
 };
 
 console.log('Using EmailJS Config:', EMAILJS_CONFIG);
